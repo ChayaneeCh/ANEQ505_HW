@@ -11,10 +11,14 @@
             "id": "c456a5e0246e1a38",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Test.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Test"
             }
           }
         ]
@@ -184,6 +188,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -195,6 +200,7 @@
   },
   "active": "c456a5e0246e1a38",
   "lastOpenFiles": [
+    "Test.md",
     "Welcome.md"
   ]
 }
