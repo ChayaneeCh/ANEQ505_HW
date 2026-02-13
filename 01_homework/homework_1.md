@@ -123,14 +123,14 @@ sbatch demux.sh
 Fill in the blank to denoise your samples based on what you think should be trimmed (from the front of the reads) or truncated (from the ends of the reads) based on the demux_cow.qzv file. You can run this in the terminal or as a job.
 
 ```
-cd /scratch/alpine/$USER/decomp_tutorial/dada2
+cd /scratch/alpine/$USER/cow/dada2
 
 qiime dada2 denoise-paired \
 --i-demultiplexed-seqs ../demux/demux_cow.qza \
---p-trim-left-f NUMBER \
---p-trim-left-r NUMBER \
---p-trunc-len-f NUMBER \
---p-trunc-len-r NUMBER \
+--p-trim-left-f 0 \
+--p-trim-left-r 0 \
+--p-trunc-len-f 250 \
+--p-trunc-len-r 250 \
 --p-n-threads 6 \
 --o-representative-sequences cow_seqs_dada2.qza \
 --o-denoising-stats cow_dada2_stats.qza \
