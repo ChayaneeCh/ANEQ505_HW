@@ -123,7 +123,7 @@ sbatch demux.sh
 Fill in the blank to denoise your samples based on what you think should be trimmed (from the front of the reads) or truncated (from the ends of the reads) based on the demux_cow.qzv file. You can run this in the terminal or as a job.
 
 ```
-cd ADD PATH TO DADA2 DIRECTORY
+cd /scratch/alpine/$USER/decomp_tutorial/dada2
 
 qiime dada2 denoise-paired \
 --i-demultiplexed-seqs ../demux/demux_cow.qza \
