@@ -86,9 +86,11 @@ a.    Go into your slurm directory using OnDemand. Create a new file named **
 #SBATCH --mail-type=ALL
 #SBATCH --output=slurm-%j.out
 #SBATCH --qos=normal
-#SBATCH --mail-user=ADD_YOUR_EMAIL@colostate.edu
+#SBATCH --mail-user=c837238655@colostate.edu
 
 #What needs to go here in order to “turn on” qiime2? Hint: we do these 2 commands every time we activate qiime2!
+module purge
+module load qiime2/2024.10_amplicon
 
 #change the following line if your file path looks different
 cd /scratch/alpine/$USER/cow/demux
@@ -96,7 +98,7 @@ cd /scratch/alpine/$USER/cow/demux
 #Below is the command you will run to demultiplex the samples.
 
 qiime demux emp-paired \
---m-barcodes-file ../metadata/ADD BARCODE FILE NAME HERE \
+--m-barcodes-file ../metadata/cow_barcodes.txt \
 --m-barcodes-column barcode \
 --p-rev-comp-mapping-barcodes \
 --p-rev-comp-barcodes \
@@ -113,7 +115,7 @@ qiime demux summarize \
 
  Run the script in your slurm directory as a job using: 
  ```
- sbatch name of your script.sh
+sbatch demux.sh
  ```
 
 8.    Denoise. 
