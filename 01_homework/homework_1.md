@@ -158,15 +158,15 @@ Briefly **describe** the key information from each denoising output file:
 3. Denoised Table
 
 **Answer the following questions:**  
-1. What is the mean reads per sample?
+1. What is the mean reads per sample? \
 	The mean reads per sample after denoising was **11,115.7 reads per sample (11,116 reads when rounded)**.
-2. How long are the reads?
+2. How long are the reads? \
 	The reads are approximately **250 base pairs (bp) long** for both forward and reverse reads.
-3. What is the maximum length of all your sequences?
+3. What is the maximum length of all your sequences? \
 		The maximum length of all representative sequences is **427 nucleotides**.
-4. Which sample (not including extraction controls starting with EC) lost the highest % of reads?
+4. Which sample (not including extraction controls starting with EC) lost the highest % of reads? \
 		The sample **2019.3.14.cow.oral.20** lost the highest percentage of reads, retaining only 8.76% of its input reads after denoising (a loss of 91.24%).
-5. Why did you chose to trim or truncate where you did?
+5. Why did you chose to trim or truncate where you did? \
 		Based on the demultiplexing quality plots (demux_cow.qzv), the minimum sequence length identified during subsampling was 251 bases, confirming that reads were approximately 250 bp long. The quality scores remained high (above Q30) across bases 1–250 for both forward and reverse reads, but the final base (position 251) of the reverse reads showed a sharp drop in quality (median = Q13). Therefore, I set **trim-left to 0 and truncated both reads at 250 bp** to remove the low-quality tail while retaining high-quality sequence data.
 
 **To submit your homework from this document:**
