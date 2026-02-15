@@ -161,7 +161,9 @@ Briefly **describe** the key information from each denoising output file:
 1. What is the mean reads per sample?
 2. How long are the reads?
 3. What is the maximum length of all your sequences?
+		The maximum length of all representative sequences is **427 nucleotides**.
 4. Which sample (not including extraction controls starting with EC) lost the highest % of reads?
+		The sample **2019.3.14.cow.oral.20** lost the highest percentage of reads, retaining only 8.76% of its input reads after denoising (a loss of 91.24%).
 5. Why did you chose to trim or truncate where you did?
 
 **To submit your homework from this document:**
