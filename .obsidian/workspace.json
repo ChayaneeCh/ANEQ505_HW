@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4ac957cef3232603",
+        "id": "41ae0f40ca26a6db",
         "type": "tabs",
         "children": [
           {
-            "id": "c456a5e0246e1a38",
+            "id": "721dfc7b7d22757c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,8 +183,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "c456a5e0246e1a38",
+  "active": "721dfc7b7d22757c",
   "lastOpenFiles": [
+    "01_homework/homework_1.md",
     "Note.md",
     "Untitled.md",
     "04_extra_credit",
