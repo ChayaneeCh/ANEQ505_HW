@@ -167,6 +167,7 @@ Briefly **describe** the key information from each denoising output file:
 4. Which sample (not including extraction controls starting with EC) lost the highest % of reads?
 		The sample **2019.3.14.cow.oral.20** lost the highest percentage of reads, retaining only 8.76% of its input reads after denoising (a loss of 91.24%).
 5. Why did you chose to trim or truncate where you did?
+		Based on the demultiplexing quality plots (demux_cow.qzv), the minimum sequence length identified during subsampling was 251 bases, confirming that reads were approximately 250 bp long. The quality scores remained high (above Q30) across bases 1–250 for both forward and reverse reads, but the final base (position 251) of the reverse reads showed a sharp drop in quality (median = Q13). Therefore, I set **trim-left to 0 and truncated both reads at 250 bp** to remove the low-quality tail while retaining high-quality sequence data.
 
 **To submit your homework from this document:**
 write all of your commands here, then use command+P (for mac) or control+P (for windows) and search Git: commit. click it. then search for Git: Push and click it. go to your github online to check that it pushed correctly. we will check your github for homework credit. 
