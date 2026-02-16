@@ -2,7 +2,7 @@
 
 **Due Feb 12th at midnight**
 
-**Name:**
+**Name: Chayanee Chanpanich** 
 
 **For complete credit for this assignment, you must answer all questions and include all commands in your obsidian upload.**
 
