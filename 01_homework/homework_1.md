@@ -153,9 +153,12 @@ qiime feature-table tabulate-seqs \
 
 	
 Briefly **describe** the key information from each denoising output file:
-1. Representative Sequences
-2. Denoising Stats
-3. Denoised Table
+1. Representative Sequences \
+		The representative sequences file, name as seqs.qzv, contains the unique amplicon sequence variants (ASVs) identified after DADA2 denoising. In this dataset, there are 4,653 representative sequences, each corresponding to a distinct microbial sequence variant. The sequences range in length from 250 to 427 bp, with a mean length of approximately 253 bp. Additionally, each sequence is assigned a unique Feature ID and can be exported or BLASTed against the NCBI nucleotide (nt) database for manual sequence identification. These representative sequences can be used for downstream analysis such as taxonomy assignment and phylogenetic tree construction.
+2. Denoising Stats \
+		The denoising stats file (cow_dada2_stats.qzv) summarizes how reads were processed through each step of the DADA2 pipeline for every sample. It reports the number of reads at each stage, including input, filtered, denoised, merged, and non-chimeric reads. Moreover, it also provide percentages such as the percentage of input reads that passed filtering, percentage of input reads successfully merged, and percentage of input reads that remained non-chimeric. These percentages indicate how much data was retained at each step and help evaluate data quality. Samples with lower percentage might have experienced poor read quality, poor overlap during merging, or higher levels of chimeric sequences.
+3. Denoised Table \
+		The denoised table (table.qzv.qza) consists of three main sections: Overview, Interactive Sample Detail, and Feature Detail, each serving a specific purpose in evaluating the dataset. Firstly, overview section summarizes the overall sequencing results, showing that 147 samples and 4,653 ASVs were retained after denoising, with a total of 1,634,012 reads. The frequency per sample statistics indicate variation in sequencing depth across samples, with a mean of 11,115.7 reads per sample and a maximum of 33,768 reads. This section is used to assess whether sequencing depth is sufficient and relatively balanced across samples. The frequency per feature summary helps to describe the distribution of ASVs, showing the presence of rare (minimum frequency = 2) versus highly abundant features (maximum frequency = 104,080). Secondly, interactive Sample Detail section allows visualization of individual sample read counts and comparison across metadata categories (e.g., swab_label, BarcodeSequence, cow_id etc.), which helps identify uneven sequencing depth that could affect downstream diversity analyses. Lastly, feature Detail section lists each ASV, its total frequency, and the number of samples in which it was observed, enabling identification of widely distributed ASVs versus those restricted to a few samples, which is important for interpreting microbial community structure and ecological patterns.
 
 **Answer the following questions:**  
 1. What is the mean reads per sample? \
