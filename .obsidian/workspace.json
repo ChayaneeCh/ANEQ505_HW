@@ -179,6 +179,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "open-vscode:VSCode": false,
       "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
