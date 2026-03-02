@@ -110,11 +110,16 @@ qiime taxa barplot \
 
 The two most abundant bacterial classes in the fecal samples are **Clostridia (Clostridia_258483)** and **Bacteroidia**.
 
+
 **_Question 3**: What highly abundant ASV is shared between both the udder and skin samples?
 
+The highly abundant ASV shared between both the udder and skin samples is **Faecousia sp000434635**, classified within the class **Clostridia_258483** (d__Bacteria; p__Bacillota_A_368345; c__Clostridia_258483; o__Oscillospirales; f__Oscillospiraceae_88309; g__Faecousia; s__Faecousia sp000434635). This ASV appears at high relative abundance in both body sites on the taxa bar plot.
 
 
 **_Question 4**: Which samples (still sorted by body_site) have higher alpha diversity in terms of observed features?
+
+
+
 
 **Question 5**: do all samples contain archaea as well?
 
