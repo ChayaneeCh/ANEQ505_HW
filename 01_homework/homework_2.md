@@ -123,7 +123,13 @@ The highly abundant ASV shared between both the udder and skin samples is **Fae
 
 **Question 5**: do all samples contain archaea as well?
 
+
+
+
 **Question 6**: why do we filter out sp004296775?
+
+sp004296775 is **not a real bacterial taxon of interest in cow microbiome samples.  It represents a reference genome placeholder or non-target sequence included in the database.
+
 
 **Question 7**: what is the difference between these two flags? 
 --p-exclude mitochondria,chloroplast,sp004296775 \
