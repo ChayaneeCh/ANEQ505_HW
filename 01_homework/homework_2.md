@@ -107,8 +107,11 @@ qiime taxa barplot \
 
 **_Question 2**: What are the top 2 most abundant bacterial **classes** in the fecal samples? 
 
+The two most abundant bacterial classes in the fecal samples are **Clostridia (Clostridia_258483)** and **Bacteroidia**.
 
 **_Question 3**: What highly abundant ASV is shared between both the udder and skin samples?
+
+
 
 **_Question 4**: Which samples (still sorted by body_site) have higher alpha diversity in terms of observed features?
 
