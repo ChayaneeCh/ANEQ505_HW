@@ -116,6 +116,7 @@ The highly abundant ASV shared between both the udder and skin samples is **Fae
 
 **Question 4**: Which samples (still sorted by body_site) have higher alpha diversity in terms of observed features?
 
+Fecal, skin, and udder samples appear to have the highest diversity. However, alpha diversity is difficult to assess precisely from the species-level taxa bar plot because many taxa are present at low relative abundance across samples. Therefore, an alpha diversity analysis is needed to more accurately quantify microbial diversity.
 
 **Question 5**: do all samples contain archaea as well?
 
@@ -123,7 +124,7 @@ No, not all samples contain Archaea. Archaea are present in some skin and udder 
 
 **Question 6**: why do we filter out sp004296775?
 
-sp004296775 is not a real bacterial taxon of interest in cow microbiome samples.  It represents a reference genome placeholder or non-target sequence included in the database.
+sp004296775 is not a real bacterial taxon of interest in cow microbiome samples.  It represents another chloroplast.
 
 **Question 7**: what is the difference between these two flags? 
 --p-exclude mitochondria,chloroplast,sp004296775 \
@@ -133,15 +134,15 @@ sp004296775 is not a real bacterial taxon of interest in cow microbiome samples.
 
 **Question 8**: do the positive controls look the same as each other? Yes or No?
 
-Yes
+**Yes**, positive controls look similar to each other, showing consistent dominant taxa and similar relative abundance patterns across the samples.
 
 **Question 9**: Do the negative/extraction controls (Samples labeled as EC), look like the positive controls? Yes or no? 
 
-No, the negative/extraction controls (EC samples) do not look like the positive controls. The EC samples show different dominant taxa and overall relative abundance patterns compared to the positive controls, indicating distinct community compositions.
+**No**, the negative/extraction controls (EC samples) do not look like the positive controls. The EC samples show different dominant taxa and overall relative abundance patterns compared to the positive controls, indicating distinct community compositions.
 
 **Question 10**: do the negative/extraction controls (Samples labeled as EC), look like the real samples? Yes or no?
 
-No, the negative/extraction controls have lower diversity and simpler community composition compared to the real samples. The EC samples are dominated by fewer taxa and do not show the complex microbial patterns observed in the biological samples.
+**No**, the negative/extraction controls have lower diversity and simpler community composition compared to the real samples. The EC samples are dominated by fewer taxa and do not show the complex microbial patterns observed in the biological samples.
 
 ## Phylogenetic tree ~={red}(1point)=~
 
