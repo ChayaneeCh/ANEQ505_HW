@@ -128,16 +128,25 @@ The highly abundant ASV shared between both the udder and skin samples is **Fae
 
 **Question 6**: why do we filter out sp004296775?
 
-sp004296775 is **not a real bacterial taxon of interest in cow microbiome samples.  It represents a reference genome placeholder or non-target sequence included in the database.
+sp004296775 is not a real bacterial taxon of interest in cow microbiome samples.  It represents a reference genome placeholder or non-target sequence included in the database.
 
 
 **Question 7**: what is the difference between these two flags? 
 --p-exclude mitochondria,chloroplast,sp004296775 \
 --p-include c__ \
 
+**--p-exclude** flag removes specific unwanted taxa which are mitochondria, chloroplast, and sp004296775 from the feature table. On the other hand, **--p-include c__** flag keeps only ASVs that are classified at least to the class level. Together, these filters remove contaminants and poorly classified sequences to improve the accuracy of downstream analyses.
+
+
 **Question 8**: do the positive controls look the same as each other? Yes or No?
 
+
+
+
 **Question 9**: Do the negative/extraction controls (Samples labeled as EC), look like the positive controls? Yes or no? 
+
+
+
 
 **Question 10**: do the negative/extraction controls (Samples labeled as EC), look like the real samples? Yes or no?
 
