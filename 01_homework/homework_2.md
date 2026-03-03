@@ -110,26 +110,20 @@ qiime taxa barplot \
 
 The two most abundant bacterial classes in the fecal samples are **Clostridia (Clostridia_258483)** and **Bacteroidia**.
 
-
 **_Question 3**: What highly abundant ASV is shared between both the udder and skin samples?
 
 The highly abundant ASV shared between both the udder and skin samples is **Faecousia sp000434635**, classified within the class **Clostridia_258483** (d__Bacteria; p__Bacillota_A_368345; c__Clostridia_258483; o__Oscillospirales; f__Oscillospiraceae_88309; g__Faecousia; s__Faecousia sp000434635). This ASV appears at high relative abundance in both body sites on the taxa bar plot.
 
-
 **_Question 4**: Which samples (still sorted by body_site) have higher alpha diversity in terms of observed features?
-
-
 
 
 **Question 5**: do all samples contain archaea as well?
 
-
-
+No, not all samples contain Archaea. Archaea are present in some skin and udder samples, but they are not detected in every sample type.
 
 **Question 6**: why do we filter out sp004296775?
 
 sp004296775 is not a real bacterial taxon of interest in cow microbiome samples.  It represents a reference genome placeholder or non-target sequence included in the database.
-
 
 **Question 7**: what is the difference between these two flags? 
 --p-exclude mitochondria,chloroplast,sp004296775 \
@@ -137,18 +131,17 @@ sp004296775 is not a real bacterial taxon of interest in cow microbiome samples.
 
 **--p-exclude** flag removes specific unwanted taxa which are mitochondria, chloroplast, and sp004296775 from the feature table. On the other hand, **--p-include c__** flag keeps only ASVs that are classified at least to the class level. Together, these filters remove contaminants and poorly classified sequences to improve the accuracy of downstream analyses.
 
-
 **Question 8**: do the positive controls look the same as each other? Yes or No?
 
 No, the positive controls do not look the same as each other. For example, one control sample is enriched (~60%) in _Cloacibacterium_ (Weeksellaceae), another is dominated by _Bacillus_ (~60%), while another contains high relative abundance of _Prevotella_ (Bacteroidaceae). These differences in dominant taxa and relative abundance patterns indicate that the control samples do not have identical community composition.
-
 
 **Question 9**: Do the negative/extraction controls (Samples labeled as EC), look like the positive controls? Yes or no? 
 
 No, the negative/extraction controls (EC samples) do not look like the positive controls. The EC samples show different dominant taxa and overall relative abundance patterns compared to the positive controls, indicating distinct community compositions.
 
-
 **Question 10**: do the negative/extraction controls (Samples labeled as EC), look like the real samples? Yes or no?
+
+No, the negative/extraction controls have lower diversity and simpler community composition compared to the real samples. The EC samples are dominated by fewer taxa and do not show the complex microbial patterns observed in the biological samples.
 
 ## Phylogenetic tree ~={red}(1point)=~
 
