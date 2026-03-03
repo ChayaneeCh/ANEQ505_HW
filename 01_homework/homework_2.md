@@ -133,7 +133,7 @@ sp004296775 is not a real bacterial taxon of interest in cow microbiome samples.
 
 **Question 8**: do the positive controls look the same as each other? Yes or No?
 
-No, the positive controls do not look the same as each other. For example, one control sample is enriched (~60%) in _Cloacibacterium_ (Weeksellaceae), another is dominated by _Bacillus_ (~60%), while another contains high relative abundance of _Prevotella_ (Bacteroidaceae). These differences in dominant taxa and relative abundance patterns indicate that the control samples do not have identical community composition.
+Yes
 
 **Question 9**: Do the negative/extraction controls (Samples labeled as EC), look like the positive controls? Yes or no? 
 
