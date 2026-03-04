@@ -100,7 +100,7 @@ qiime taxa barplot \
 
 ## Filtered Taxa Bar Plot Questions ~={red}(10 points)=~
 
-**Question 1**: Attach a picture of your taxa bar plot, organized by cow sampling location (body_site) at the level 7 taxonomic level. What general trends do you notice?  \
+**Question 1**: Attach a picture of your taxa bar plot, organized by cow sampling location (body_site) at the level 7 taxonomic level. What general trends do you notice? 
 
 The taxa bar plot below shows differences in microbial community composition across the different body sites. Most fecal samples are dominated by three main species: Faecousia sp000434635, Cryptobacteroides sp902787255, and Treponema_D porcinum. These species make up a large proportion of the microbial community in fecal samples. Fecal, skin, and udder samples also show a wide distribution of colors across taxa, indicating diverse microbial communities. In contrast, many oral and nasal samples are strongly dominated by one or two taxa, which appear as large blocks in the bar chart. Across all sample types, the lower portions of the bars contain many thin colored bands, indicating a high number of low-abundance taxa contributing to overall diversity.
 
@@ -118,7 +118,8 @@ The highly abundant ASV shared between both the udder and skin samples is **Fae
 
 **Question 4**: Which samples (still sorted by body_site) have higher alpha diversity in terms of observed features?
 
-Fecal, skin, and udder samples appear to have the highest diversity. However, alpha diversity is difficult to assess precisely from the species-level taxa bar plot because many taxa are present at low relative abundance across samples. Therefore, an alpha diversity analysis is needed to more accurately quantify microbial diversity.
+**Fecal, skin, and udder samples** appear to have the highest diversity. However, alpha diversity is difficult to assess precisely from the species-level taxa bar plot because many taxa are present at low relative abundance across samples. Therefore, an alpha diversity analysis is needed to more accurately quantify microbial diversity. \
+If I need to choose only one body site, it would likely be **fecal samples**, which generally exhibit the highest alpha diversity. The gut provides a complex, nutrient, environment that supports a large and diverse community of microbial taxa. In contrast, other body sites are often more exposed to external environmental conditions, which can lead to less diverse or less stable microbial communities compared to the gut.
 
 **Question 5**: do all samples contain archaea as well?
 
