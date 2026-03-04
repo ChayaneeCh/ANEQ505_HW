@@ -102,6 +102,8 @@ qiime taxa barplot \
 
 **Question 1**: Attach a picture of your taxa bar plot, organized by cow sampling location (body_site) at the level 7 taxonomic level. What general trends do you notice?  \
 
+The taxa bar plot below shows differences in microbial community composition across the different body sites. Most fecal samples are dominated by three main species: Faecousia sp000434635, Cryptobacteroides sp902787255, and Treponema_D porcinum. These species make up a large proportion of the microbial community in fecal samples. Fecal, skin, and udder samples also show a wide distribution of colors across taxa, indicating diverse microbial communities. In contrast, many oral and nasal samples are strongly dominated by one or two taxa, which appear as large blocks in the bar chart. Across all sample types, the lower portions of the bars contain many thin colored bands, indicating a high number of low-abundance taxa contributing to overall diversity.
+
 ![barplot](image/HW2_level-7-bars.svg)
 ![legend](image/HW2_level-7-legend.svg)
 
