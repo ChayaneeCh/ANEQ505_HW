@@ -49,7 +49,7 @@ qiime diversity core-metrics-phylogenetic \
 --i-table dada2/cow_table_dada2_filtered300.qza \
 --i-phylogeny tree/tree_gg2.qza \
 --m-metadata-file metadata/cow_metadata.txt \
---p-sampling-depth INSERT SEQ DEPTH HERE \
+--p-sampling-depth 1500 \
 --output-dir core_metrics_results
 ```
 
