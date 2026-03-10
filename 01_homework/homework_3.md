@@ -77,16 +77,42 @@ qiime diversity alpha-group-significance \
 ## Homework questions ~={red}(10 points)=~
 
 1. what is the name of the file you needed to use to figure out what min and max depths to use to generate the alpha rarefaction plot? (Hint: which file contains the sequencing depths for each sample)
-2. what did you choose for the rarefaction depth (the input for core metrics -p-sampling-depth flag)? why? 
-3. Which cow body location had more observed features? Which has the lowest?
-4. What is the main difference between Faiths PD and Shannons alpha diversity metrics?  
-5. Which diversity metrics produced by the core-metrics pipeline require phylogenetic information?
-6. Which two body sites have the highest Faiths PD alpha diversity?  Are the groups significantly different?
-7. Does it seem like there are any groupings in the beta diversity? What are the groupings? 
-8. Why do you think these samples are grouping together? 
-9. What test can you run to determine if the groups are significantly different?
-10. What command would you use to run that test?
 
+	cow_table_dada2_filtered300.qzv
+
+2. what did you choose for the rarefaction depth (the input for core metrics -p-sampling-depth flag)? why? 
+
+	The rarefaction curves plateau around 1500–2000 sequencing depth, indicating that most diversity is captured by this point. Hence, a sampling depth of **1500** is appropriate for downstream core-metrics analysis.
+
+3. Which cow body location had more observed features? Which has the lowest?
+
+
+
+4. What is the main difference between Faiths PD and Shannons alpha diversity metrics?  
+
+
+
+5. Which diversity metrics produced by the core-metrics pipeline require phylogenetic information?
+
+
+
+6. Which two body sites have the highest Faiths PD alpha diversity?  Are the groups significantly different?
+
+
+
+7. Does it seem like there are any groupings in the beta diversity? What are the groupings? 
+
+
+
+8. Why do you think these samples are grouping together? 
+
+
+
+9. What test can you run to determine if the groups are significantly different?
+
+
+
+10. What command would you use to run that test?
 ```
 #insert command for running the test you suggest from question 7
 
