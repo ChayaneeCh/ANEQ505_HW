@@ -37,8 +37,8 @@ qiime diversity alpha-rarefaction \
 --i-table dada2/cow_table_dada2_filtered300.qza \
 --m-metadata-file metadata/cow_metadata.txt \
 --o-visualization alpha_rarefaction_curves_16S.qzv \
---p-min-depth ADD MIN RAREFACTION DEPTH \
---p-max-depth ADD MAX RAREFACTION DEPTH
+--p-min-depth 3 \
+--p-max-depth 11000
 ```
 
 
