@@ -58,16 +58,18 @@ qiime diversity core-metrics-phylogenetic \
 - generate a plot to visualize the observed features ~={red}(1 point)=~
 ```
 qiime diversity alpha-group-significance \
---i-alpha-diversity core_metrics_results/FILENAME.qza \
+--i-alpha-diversity core_metrics_results/observed_features_vector.qza \
 --m-metadata-file metadata/cow_metadata.txt \
---o-visualization core_metrics_results/OUTPUT-FILENAME.qzv
+--o-visualization core_metrics_results/observed_features_statistics.qzv
 ```
 
 - generate a plot to visualize faith's PD ~={red}(2 points)=~
 ```
 ## insert the entire code chunk for generating this visualization 
-
-
+qiime diversity alpha-group-significance \  
+--i-alpha-diversity core-metrics-results/faith_pd_vector.qza \  
+--m-metadata-file metadata/cow_metadata.txt \  
+--o-visualization core-metrics-results/faiths_pd_statistics.qzv
 ```
 
 
