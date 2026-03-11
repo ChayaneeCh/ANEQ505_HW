@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "949f8e865a283de3",
@@ -197,8 +196,8 @@
   },
   "active": "1122323033bfdb36",
   "lastOpenFiles": [
-    "01_homework/homework_3.md",
     "Note.md",
+    "01_homework/homework_3.md",
     "01_homework/homework_2.md",
     "01_homework/homework_1.md",
     "level-7-legend.svg",
