@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b57afaa03f7faaf4",
+        "id": "da4bbe3fa941cae2",
         "type": "tabs",
         "children": [
           {
-            "id": "f32866c7cddfcb63",
+            "id": "f1094c7f7010d3a4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -190,7 +190,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "f32866c7cddfcb63",
+  "active": "f1094c7f7010d3a4",
   "lastOpenFiles": [
     "01_homework/homework_3.md",
     "Note.md",
