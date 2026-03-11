@@ -86,19 +86,19 @@ qiime diversity alpha-group-significance \
 
 3. Which cow body location had more observed features? Which has the lowest?
 
-	Fecal samples show the highest number of observed features, while nasal samples have the lowest number when control samples are excluded.
+	**Fecal** samples show the highest number of observed features, while **nasal** samples have the lowest number when control samples are excluded.
 
 4. What is the main difference between Faiths PD and Shannons alpha diversity metrics?  
 
-	**Faith's PD** measures diversity using diversity using phylogenetic relationships between organisms. It calculates the total branch length of the phylogenetic tree represented in a sample, reflecting the evolutionary diversity of the community. On the other hand, **Shannon’s alpha diversity** measures diversity based on species richness and evenness. It considers both how many species are present and how evenly they are distributed in the sample. It does not use phylogenetic information.
+	**Faith's PD** measure diversity using diversity using phylogenetic relationships between organisms. It calculates the total branch length of the phylogenetic tree represented in a sample, reflecting the evolutionary diversity of the community. On the other hand, **Shannon’s alpha diversity** measure diversity based on species richness and evenness. It considers both how many species are present and how evenly they are distributed in the sample. It does not use phylogenetic information.
 
 5. Which diversity metrics produced by the core-metrics pipeline require phylogenetic information?
 
-
+	The diversity metrics produced by the core-metrics pipeline that require phylogenetic information are **Faith’s Phylogenetic Diversity (Faith’s PD)**, **Unweighted UniFrac**, and **Weighted UniFrac**.
 
 6. Which two body sites have the highest Faiths PD alpha diversity?  Are the groups significantly different?
 
-
+	The two body sites with the highest Faith’s PD alpha diversity are **fecal and skin**. According to the Kruskal–Wallis pairwise test, these groups are **significantly different**, as indicated by both the p-value (1.820117e-04) and the q-value (3.033528e-04) which are both less than 0.05.
 
 7. Does it seem like there are any groupings in the beta diversity? What are the groupings? 
 
