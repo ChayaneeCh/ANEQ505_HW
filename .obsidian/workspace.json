@@ -11,10 +11,14 @@
             "id": "f1094c7f7010d3a4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01_homework/homework_3.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "homework_3"
             }
           }
         ]
