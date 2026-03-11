@@ -102,31 +102,18 @@ qiime diversity alpha-group-significance \
 
 7. Does it seem like there are any groupings in the beta diversity? What are the groupings? 
 
-
+	Yes, there are some groupings in the beta diversity plots. Based on the unweighted and weighted unifrac, **fecal samples** form a distinct cluster and group tightly together, separate from the other body sites. **Skin and udder samples** appear close to each other. **Nasal and oral samples** also group together, but their clustering is less tight and more spread out compared to the other samples.
 
 8. Why do you think these samples are grouping together? 
 
-
+	These samples are grouping together because samples from the same or similar body sites tend to have similar microbial communities. Each body location provides a different environment which relate to oxygen, moisture, nutrients, and host contract. **Fecal samples** cluster together because they come from gut environment inside the body, while **skin and udder** group closely because they are both external body surfaces. **Nasal and oral samples** also group together because they are both associated with the upper respiratory and mouth regions.
 
 9. What test can you run to determine if the groups are significantly different?
 
-
+	The test that can be run to determine if the groups are significantly different is **PERMANOVA (Permutational Multivariate Analysis of Variance)**. It tests whether beta diversity differs significantly between groups based on a chosen sample grouping variable.
 
 10. What command would you use to run that test?
 ```
 #insert command for running the test you suggest from question 7
 
-# Unweighted UniFrac PERMANOVA:
-qiime diversity beta-group-significance \
---i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza \
---m-metadata-file metadata/cow_metadata.txt \
---m-metadata-column body_site \
---o-visualization core_metrics_results/unweighted_unifrac_distance_matrix.qzv
-
-# Bray-Curtis PERMANOVA:
-qiime diversity beta-group-significance \
---i-distance-matrix core_metrics_results/bray_curtis_distance_matrix.qza \
---m-metadata-file metadata/cow_metadata.txt \
---m-metadata-column body_site \
---o-visualization core_metrics_results/bray_curtis_distance_matrix.qzv
 ```
