@@ -116,4 +116,17 @@ qiime diversity alpha-group-significance \
 ```
 #insert command for running the test you suggest from question 7
 
+# unweighted unifrac significance
+qiime diversity beta-group-significance \
+--i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
+--m-metadata-file metadata/metadata.txt \
+--m-metadata-column body_site \
+--o-visualization core-metrics-results/unweighted_unifrac_distance_matrix.qzv
+
+# bray curtis significance  
+qiime diversity beta-group-significance \  
+--i-distance-matrix core-metrics-results/bray_curtis_distance_matrix.qza \  
+--m-metadata-file metadata/metadata.txt \  
+--m-metadata-column body_site \  
+--o-visualization core-metrics-results/bray_curtis_distance_matrix.qzv
 ```
