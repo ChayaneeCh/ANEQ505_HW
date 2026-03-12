@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4732b5f9bcd25c64",
+        "id": "731e2734a9a0edb6",
         "type": "tabs",
         "children": [
           {
-            "id": "b644c331985987bd",
+            "id": "5bd371fc8e39914f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Note.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Note"
             }
           }
         ]
@@ -190,7 +194,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "b644c331985987bd",
+  "active": "5bd371fc8e39914f",
   "lastOpenFiles": [
     "01_homework/homework_3.md",
     "Note.md",
