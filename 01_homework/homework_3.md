@@ -113,20 +113,23 @@ qiime diversity alpha-group-significance \
 	The test that can be run to determine if the groups are significantly different is **PERMANOVA (Permutational Multivariate Analysis of Variance)**. It tests whether beta diversity differs significantly between groups based on a chosen sample grouping variable.
 
 10. What command would you use to run that test?
+
+	The commands below test whether microbial communities differ significantly between groups (body sites) using beta diversity distance matrices. The **beta-group-significance** method performs a statistical test (**PERMANOVA** by default) to determine whether community composition differs between groups defined in the metadata. Here, the metadata column **body_site** is used to test whether body site is associated with significant differences in **Unweighted UniFrac** and **Bray–Curtis** distances.
+
 ```
 #insert command for running the test you suggest from question 7
 
 # unweighted unifrac significance
 qiime diversity beta-group-significance \
 --i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
---m-metadata-file metadata/metadata.txt \
+--m-metadata-file metadata/cow_metadata.txt \
 --m-metadata-column body_site \
 --o-visualization core-metrics-results/unweighted_unifrac_distance_matrix.qzv
 
 # bray curtis significance  
 qiime diversity beta-group-significance \  
 --i-distance-matrix core-metrics-results/bray_curtis_distance_matrix.qza \  
---m-metadata-file metadata/metadata.txt \  
+--m-metadata-file metadata/cow_metadata.txt \  
 --m-metadata-column body_site \  
 --o-visualization core-metrics-results/bray_curtis_distance_matrix.qzv
 ```
