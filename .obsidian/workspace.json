@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "422d68706d34889e",
+        "id": "4732b5f9bcd25c64",
         "type": "tabs",
         "children": [
           {
-            "id": "140757075fd06167",
+            "id": "b644c331985987bd",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -74,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "949f8e865a283de3",
@@ -191,7 +190,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "140757075fd06167",
+  "active": "b644c331985987bd",
   "lastOpenFiles": [
     "01_homework/homework_3.md",
     "Note.md",
