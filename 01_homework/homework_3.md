@@ -78,7 +78,7 @@ qiime diversity alpha-group-significance \
 
 1. what is the name of the file you needed to use to figure out what min and max depths to use to generate the alpha rarefaction plot? (Hint: which file contains the sequencing depths for each sample)
 
-	cow_table_dada2_filtered300.qzv
+	The file used to determine the minimum and maximum sequencing depths for generating the alpha rarefaction plot is **cow_table_dada2_filtered300.qzv**
 
 2. what did you choose for the rarefaction depth (the input for core metrics -p-sampling-depth flag)? why? 
 
@@ -90,7 +90,7 @@ qiime diversity alpha-group-significance \
 
 4. What is the main difference between Faiths PD and Shannons alpha diversity metrics?  
 
-	**Faith's PD** measure diversity using diversity using phylogenetic relationships between organisms. It calculates the total branch length of the phylogenetic tree represented in a sample, reflecting the evolutionary diversity of the community. On the other hand, **Shannon’s alpha diversity** measure diversity based on species richness and evenness. It considers both how many species are present and how evenly they are distributed in the sample. It does not use phylogenetic information.
+	**Faith's PD** measure diversity using phylogenetic relationships between organisms. It calculates the total branch length of the phylogenetic tree represented in a sample, reflecting the evolutionary diversity of the community. On the other hand, **Shannon’s alpha diversity** measure diversity based on species richness and evenness. It considers both how many species are present and how evenly they are distributed in the sample. It does not use phylogenetic information.
 
 5. Which diversity metrics produced by the core-metrics pipeline require phylogenetic information?
 
@@ -114,7 +114,7 @@ qiime diversity alpha-group-significance \
 
 10. What command would you use to run that test?
 
-	The commands below test whether microbial communities differ significantly between groups (body sites) using beta diversity distance matrices. The **beta-group-significance** method performs a statistical test (**PERMANOVA** by default) to determine whether community composition differs between groups defined in the metadata. Here, the metadata column **body_site** is used to test whether body site is associated with significant differences in **Unweighted UniFrac** and **Bray–Curtis** distances.
+	The commands below test whether microbial communities differ significantly between groups (body sites) using beta diversity distance matrices. The **beta-group-significance** method performs a statistical test (**PERMANOVA** by default, but it can also be explicitly set using `--p-method permanova`) to determine whether community composition differs between groups defined in the metadata. Here, the metadata column **body_site** is used to test whether body site is associated with significant differences in **Unweighted UniFrac** and **Bray–Curtis** distances.
 
 ```
 #insert command for running the test you suggest from question 7
