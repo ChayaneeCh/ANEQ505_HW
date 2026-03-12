@@ -67,9 +67,9 @@ qiime diversity alpha-group-significance \
 ```
 ## insert the entire code chunk for generating this visualization 
 qiime diversity alpha-group-significance \  
---i-alpha-diversity core-metrics-results/faith_pd_vector.qza \  
+--i-alpha-diversity core_metrics_results/faith_pd_vector.qza \  
 --m-metadata-file metadata/cow_metadata.txt \  
---o-visualization core-metrics-results/faiths_pd_statistics.qzv
+--o-visualization core_metrics_results/faiths_pd_statistics.qzv
 ```
 
 
@@ -121,15 +121,15 @@ qiime diversity alpha-group-significance \
 
 # unweighted unifrac significance
 qiime diversity beta-group-significance \
---i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
+--i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza \
 --m-metadata-file metadata/cow_metadata.txt \
 --m-metadata-column body_site \
---o-visualization core-metrics-results/unweighted_unifrac_distance_matrix.qzv
+--o-visualization core_metrics_results/unweighted_unifrac_distance_matrix.qzv
 
-# bray curtis significance  
-qiime diversity beta-group-significance \  
---i-distance-matrix core-metrics-results/bray_curtis_distance_matrix.qza \  
---m-metadata-file metadata/cow_metadata.txt \  
---m-metadata-column body_site \  
---o-visualization core-metrics-results/bray_curtis_distance_matrix.qzv
+# bray curtis significance
+qiime diversity beta-group-significance \
+--i-distance-matrix core_metrics_results/bray_curtis_distance_matrix.qza \
+--m-metadata-file metadata/cow_metadata.txt \
+--m-metadata-column body_site \
+--o-visualization core_metrics_results/bray_curtis_distance_matrix.qzv
 ```
