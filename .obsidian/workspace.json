@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "73179fc5ebf1987c",
+        "id": "9f10d145c6bfc154",
         "type": "tabs",
         "children": [
           {
-            "id": "3f5548da5aa8db63",
+            "id": "9065cb98bb5160e1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_paper_discussions/paper_discussion_2.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "paper_discussion_2"
+              "title": "New tab"
             }
           }
         ]
@@ -194,10 +190,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "3f5548da5aa8db63",
+  "active": "87419d21325c8c73",
   "lastOpenFiles": [
-    "figure.md",
     "03_paper_discussions/paper_discussion_2.md",
+    "figure.md",
     "03_paper_discussions/paper_discussion_1.md",
     "Untitled.md",
     "03_paper_discussions/figure/discussion2.png",
