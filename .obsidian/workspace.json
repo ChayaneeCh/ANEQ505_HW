@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9f10d145c6bfc154",
+        "id": "72632d0a4e10cf5b",
         "type": "tabs",
         "children": [
           {
-            "id": "9065cb98bb5160e1",
+            "id": "614f434a6730f91d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CoSMic_Activities.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "CoSMic_Activities"
             }
           }
         ]
@@ -190,12 +194,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "87419d21325c8c73",
+  "active": "614f434a6730f91d",
   "lastOpenFiles": [
-    "03_paper_discussions/paper_discussion_2.md",
+    "Note.md",
+    "CoSMic_Activities.md",
     "figure.md",
+    "03_paper_discussions/paper_discussion_2.md",
     "03_paper_discussions/paper_discussion_1.md",
-    "Untitled.md",
     "03_paper_discussions/figure/discussion2.png",
     "figure/discussion1.md",
     "figure",
@@ -203,7 +208,6 @@
     "03_paper_discussions/figure",
     "Untitled",
     "01_homework/homework_3.md",
-    "Note.md",
     "01_homework/homework_2.md",
     "01_homework/homework_1.md",
     "level-7-legend.svg",
