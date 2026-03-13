@@ -11,14 +11,10 @@
             "id": "614f434a6730f91d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CoSMic_Activities.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "CoSMic_Activities"
+              "title": "New tab"
             }
           }
         ]
@@ -196,8 +192,8 @@
   },
   "active": "614f434a6730f91d",
   "lastOpenFiles": [
-    "Note.md",
     "CoSMic_Activities.md",
+    "Note.md",
     "figure.md",
     "03_paper_discussions/paper_discussion_2.md",
     "03_paper_discussions/paper_discussion_1.md",
