@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "72632d0a4e10cf5b",
+        "id": "cc843447dc08d600",
         "type": "tabs",
         "children": [
           {
-            "id": "614f434a6730f91d",
+            "id": "db5cc906f35072b6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -190,15 +190,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "614f434a6730f91d",
+  "active": "db5cc906f35072b6",
   "lastOpenFiles": [
+    "figure/discussion1.md",
     "CoSMic_Activities.md",
     "Note.md",
     "figure.md",
     "03_paper_discussions/paper_discussion_2.md",
     "03_paper_discussions/paper_discussion_1.md",
     "03_paper_discussions/figure/discussion2.png",
-    "figure/discussion1.md",
     "figure",
     "03_paper_discussions/figure/discussion1.png",
     "03_paper_discussions/figure",
