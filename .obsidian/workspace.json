@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cc843447dc08d600",
+        "id": "a516febd5e2cea53",
         "type": "tabs",
         "children": [
           {
-            "id": "db5cc906f35072b6",
+            "id": "7d711c438be2dba4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -190,7 +190,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "db5cc906f35072b6",
+  "active": "7d711c438be2dba4",
   "lastOpenFiles": [
     "figure/discussion1.md",
     "CoSMic_Activities.md",
