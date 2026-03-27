@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a516febd5e2cea53",
+        "id": "2fa74ee147071f7d",
         "type": "tabs",
         "children": [
           {
-            "id": "7d711c438be2dba4",
+            "id": "3e3f37d2bab656c0",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -190,8 +190,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "7d711c438be2dba4",
+  "active": "3e3f37d2bab656c0",
   "lastOpenFiles": [
+    "01_homework/homework_2.md",
+    "01_homework/homework_1.md",
     "figure/discussion1.md",
     "CoSMic_Activities.md",
     "Note.md",
@@ -204,8 +206,6 @@
     "03_paper_discussions/figure",
     "Untitled",
     "01_homework/homework_3.md",
-    "01_homework/homework_2.md",
-    "01_homework/homework_1.md",
     "level-7-legend.svg",
     "level-7-bars.svg",
     "04_extra_credit",
