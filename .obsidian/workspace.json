@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_paper_discussions/paper_discussion_3.md",
+                "file": "04_extra_credit/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "paper_discussion_3"
+              "title": "README"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "188c528f1ef21fcd",
   "lastOpenFiles": [
-    "04_extra_credit/README.md",
     "03_paper_discussions/paper_discussion_3.md",
+    "04_extra_credit/README.md",
     "03_paper_discussions/paper_discussion_1.md",
     "03_paper_discussions/paper_discussion_2.md",
     "01_homework/homework_3.md",
