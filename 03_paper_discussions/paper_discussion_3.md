@@ -11,3 +11,4 @@ For the cattle rumen reactors, the microbial community became highly dominated b
 
 **Note:**
 
+![paper3](figure/discussion3.png)
