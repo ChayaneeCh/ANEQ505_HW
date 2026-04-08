@@ -126,10 +126,15 @@ qiime feature-table filter-features \
 **Collapse features to genus level ~={red}(1 point)=~**
 - We will collapse to the genus level to make it easier to interpret the results. (Hint: We used 7 for species, so think about which number you would use for genus.)
 
+**RECHECK this part:
+Previous run
+(1/1) Invalid value for '--i-taxonomy': ../taxonomy/taxonomy_gg2.qza does not exist.
+Let's try taxonomy_gg2_filtered.qza**
+
 ```
 qiime taxa collapse \
 --i-table table_5k_abund.qza \
---i-taxonomy ../taxonomy/taxonomy_gg2.qza \
+--i-taxonomy ../taxonomy/taxonomy_gg2_filtered.qza \
 --p-level 6 \
 --o-collapsed-table table_5k_abund_L6.qza
 ```
@@ -150,11 +155,11 @@ qiime composition ancombc2 \
 - Generate a barplot to visualize the differentially abundant features. 
 ```
 qiime composition tabulate \
---i-data INPUT FILE \
+--i-data ancombc2_results_bodysite_genus.qza \
 --o-visualization ancombc2_bodysite_genus.qzv
   
 qiime composition ancombc2-visualizer \
-  --i-data INPUT FILE \
+  --i-data ancombc2_results_bodysite_genus.qza \
   --o-visualization ancombc2_barplot_bodysite_genus.qzv
 ```
 
