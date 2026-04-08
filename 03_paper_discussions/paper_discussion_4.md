@@ -21,4 +21,11 @@ Overall, Figure 6 provides direct evidence that root exudates shape not just who
 
 **Note:**
 
+*Encoded* = Genomic potential 
+- The gene is present in the genome (DNA).
+- The microbe has the capability to perform that function.
+*Expressed* = Active function
+- The gene is being transcribed into RNA.
+- The function is actively happening at that time.
+
 ![note](figure/discussion4.png)
