@@ -105,11 +105,11 @@ qiime feature-table filter-samples \
 **Filter Samples ~={red}(1 point)=~** 
 - Navigate into the cow tutorial and make a new ancombc2 directory for the ANCOM-BC2 analysis
 - Navigate into the ancombc2 directory
-- Choose the min frequency for sample filtering:
+- Choose the min frequency for sample filtering: **(Recheck: Try --p-min-frequency 5000)**
 ```
 qiime feature-table filter-samples \
 --i-table table_nomitochlorocontrols_gg2_filtered300.qza \
---p-min-frequency YOUR NUMBER HERE \
+--p-min-frequency 5000 \
 --o-filtered-table table_5k.qza
 ```
 
@@ -117,7 +117,7 @@ qiime feature-table filter-samples \
 
 ```
 qiime feature-table filter-features \
---i-table INPUT TABLE \
+--i-table table_5k.qza \
 --p-min-frequency 50 \
 --p-min-samples 20 \
 --o-filtered-table table_5k_abund.qza
@@ -130,8 +130,8 @@ qiime feature-table filter-features \
 qiime taxa collapse \
 --i-table table_5k_abund.qza \
 --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
---p-level GENUS NUMBER \
---o-collapsed-table table_5k_abund_GENUS NUMBER.qza
+--p-level 6 \
+--o-collapsed-table table_5k_abund_L6.qza
 ```
 
 
@@ -139,7 +139,7 @@ qiime taxa collapse \
 
 ```
 qiime composition ancombc2 \
---i-table table_5k_abund_GENUS NUMBER.qza \
+--i-table table_5k_abund_L6.qza \
 --m-metadata-file cow_metadata_nocontrols.txt \
 --p-fixed-effects-formula body_site \
 --o-ancombc2-output ancombc2_results_bodysite_genus.qza
