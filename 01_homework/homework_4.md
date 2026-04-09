@@ -231,7 +231,8 @@ qiime sample-classifier classify-samples \
 
 3. what are 2 features that are low in nasal?
 
-	Two features that are low in nasal samples are Parabacteroides_B_862066 and Ruoffia (genus level).
+	I selected features that appeared very low in the nasal samples based on the heatmap coloring. Specifically, I looked for features that were shown in dark purple (low abundance) rather than black, since black represents zero abundance (absence). I chose features that were present in other body sites but had noticeably lower abundance in the nasal row, indicating they are relatively depleted in nasal samples.
+	Two features that are low in nasal samples are **Parabacteroides_B_862066 and Ruoffia**.
 
 4. what is the accuracy of your model, and if the accuracy of the classifier is high, what does that suggest about the microbial compositions of each site?
 
