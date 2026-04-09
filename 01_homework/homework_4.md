@@ -221,6 +221,16 @@ qiime sample-classifier classify-samples \
 
 ### **Questions:**
 1. Why might removing controls be important before downstream analysis? 
+
+	Removing controls is important because we do not want the machine learning classifier to learn patterns from control samples which don't represent meaningful biological variation. Including controls could either add noise or negatively impact model performance. Our goal is for the model to distinguish between different cow body sites. Hence, removing controls ensures the classifier focuses only on relevant biological differences.
+
 2. what 2 features that are high in fecal samples? 
+
+
+
 3. what are 2 features that are low in nasal?
+
+
+
 4. what is the accuracy of your model, and if the accuracy of the classifier is high, what does that suggest about the microbial compositions of each site?
+
