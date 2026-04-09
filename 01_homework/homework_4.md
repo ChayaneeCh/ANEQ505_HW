@@ -219,6 +219,7 @@ qiime sample-classifier classify-samples \
 --output-dir sample_classifier_results_bodysite
 ```
 
+
 ### **Questions:**
 1. Why might removing controls be important before downstream analysis? 
 
@@ -226,7 +227,7 @@ qiime sample-classifier classify-samples \
 
 2. what 2 features that are high in fecal samples? 
 
-
+	Two features that are high in fecal samples are *Cryptobacteroides sp902787255* and *Faecousia sp000434635*.
 
 3. what are 2 features that are low in nasal?
 
