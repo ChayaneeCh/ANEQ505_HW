@@ -169,7 +169,7 @@ qiime composition ancombc2-visualizer \
 	 unzip "$f" -d "${f%.zip}"
 	done
 	```
-	From these directories, specific files such as shannon.tsv (alpha diversity) and unweighted_unifrac.txt (beta diversity) can be extracted and ready to use for R. Moreover, the feature table must first be processed in Qiime2. This includes transposing the table, merging it with sequence and taxonomic classification data, and generating a visualization file (.qzv). From this visualization, a combined TSV file (e.g. tabulated_results.tsv) can be downloaded.
+	From these directories, specific files such as shannon.tsv (alpha diversity) and unweighted_unifrac.txt (beta diversity) can be extracted and ready to use for R. Moreover, the feature table must first be processed in Qiime2. This includes transposing the table, merging it with sequence and taxonomic classification data, and generating a visualization file. From this visualization, a combined TSV file (e.g. tabulated_results.tsv) can be downloaded.
 
 2. Which body site appeared most distinct in the taxa bar plot, meaning it was not similar to at least one of the other body sites? Explain why that site looks different. 
 
@@ -177,10 +177,15 @@ qiime composition ancombc2-visualizer \
 
 3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here: **5000**) 
 
+	The chosen value was **5000**, which matches the **rarefaction** depth used in the core diversity metrics (`--p-sampling-depth 5000`). These values must match because both steps standardize sequencing depth across samples. Using the same threshold ensures consistency across analyses and allows us to compare the same set of samples. If different values were used, this could introduce noise and potentially bias both diversity and differential abundance results.
+
 4. Why do we filter out samples with low frequency and low abundance ASVs?
+
+	Filtering removes low-frequency samples and low-abundance or low-prevalence ASVs. Removing low-frequency samples helps reduce noise from poorly sequenced samples, while removing low-abundance ASVs eliminates rare taxa that may represent sequencing artifacts. Overall, this improves statistical power, reduces false positives, and leads to more reliable biological interpretations.
 
 5. What was the most enriched genus in skin compared to fecal, and what was the most depleted genus in skin compared to fecal (make sure adjusted p is set to less than 0.05)?
 	
+	The most enriched genus in skin compared to fecal samples is **Atopostipes**, while the most depleted genus in skin relative to fecal samples is **Streptococcus**.
 
 ## Extra credit~={orange} (3 points)=~ generate a classification model to see how well we can predict cow body site
 
