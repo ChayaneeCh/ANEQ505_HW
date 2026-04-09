@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9f48c21d943bf99a",
+        "id": "b9c8d37f13247939",
         "type": "tabs",
         "children": [
           {
-            "id": "445cfa0b975c1a37",
+            "id": "b0416784472d49ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "949f8e865a283de3",
@@ -195,10 +194,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "445cfa0b975c1a37",
+  "active": "b0416784472d49ef",
   "lastOpenFiles": [
-    "01_homework/homework_4.md",
     "01_homework/homework_3.md",
+    "01_homework/homework_4.md",
     "01_homework/homework_2.md",
     "03_paper_discussions/paper_discussion_4.md",
     "03_paper_discussions/paper_discussion_3.md",

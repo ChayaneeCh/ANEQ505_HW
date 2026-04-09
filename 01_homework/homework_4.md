@@ -163,7 +163,17 @@ qiime composition ancombc2-visualizer \
 ## Homework questions: (~={red}5 POINTS=~)
 1. Describe one way to get data from your qiime2 outputs into a format that can be used for R. 
 
+	First, export the relevant results (alpha and beta diversity outputs) from Qiime2. These are typically downloaded as compressed (.zip) directories such as alpha_div and beta_div. After downloading them to a local computer, they can be unzipped using a command like:
+	```
+	for f in *_div.zip; do
+	 unzip "$f" -d "${f%.zip}"
+	done
+	```
+	From these directories, specific files such as shannon.tsv (alpha diversity) and unweighted_unifrac.txt (beta diversity) can be extracted and ready to use for R. Moreover, the feature table must first be processed in Qiime2. This includes transposing the table, merging it with sequence and taxonomic classification data, and generating a visualization file (.qzv). From this visualization, a combined TSV file (e.g. tabulated_results.tsv) can be downloaded.
+
 2. Which body site appeared most distinct in the taxa bar plot, meaning it was not similar to at least one of the other body sites? Explain why that site looks different. 
+
+	The **fecal samples** appeared most distinct in the taxa bar plot. This is because the gut microbiome is specialized and dominated by anaerobic bacteria, which differ from microbes found on external body sites. As a result, the microbial composition of fecal samples is significantly different from other body sites.
 
 3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here: **5000**) 
 
