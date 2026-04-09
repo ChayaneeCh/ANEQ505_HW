@@ -105,7 +105,7 @@ qiime feature-table filter-samples \
 **Filter Samples ~={red}(1 point)=~** 
 - Navigate into the cow tutorial and make a new ancombc2 directory for the ANCOM-BC2 analysis
 - Navigate into the ancombc2 directory
-- Choose the min frequency for sample filtering: **(Recheck: Try --p-min-frequency 5000)**
+- Choose the min frequency for sample filtering: 
 ```
 qiime feature-table filter-samples \
 --i-table table_nomitochlorocontrols_gg2_filtered300.qza \
@@ -127,10 +127,6 @@ qiime feature-table filter-features \
 **Collapse features to genus level ~={red}(1 point)=~**
 - We will collapse to the genus level to make it easier to interpret the results. (Hint: We used 7 for species, so think about which number you would use for genus.)
 
-**RECHECK this part:
-Previous run
-(1/1) Invalid value for '--i-taxonomy': ../taxonomy/taxonomy_gg2.qza does not exist.
-Let's try taxonomy_gg2_filtered.qza**
 
 ```
 qiime taxa collapse \
@@ -169,7 +165,7 @@ qiime composition ancombc2-visualizer \
 
 2. Which body site appeared most distinct in the taxa bar plot, meaning it was not similar to at least one of the other body sites? Explain why that site looks different. 
 
-3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here:     ___) 
+3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here: **5000**) 
 
 4. Why do we filter out samples with low frequency and low abundance ASVs?
 
@@ -190,9 +186,10 @@ qiime feature-table filter-samples \
 --p-where "[body_site] != 'control'" \
 --o-filtered-table rarefied_table_no_controls.qza
 
+
 qiime taxa collapse \
 --i-table rarefied_table_no_controls.qza \
---i-taxonomy ../taxonomy/taxonomy_gg2.qza \
+--i-taxonomy ../taxonomy/taxonomy_gg2_filtered.qza \
 --p-level 7 \
 --o-collapsed-table rarefied_table_no_controls_L7.qza
 ```
@@ -207,6 +204,11 @@ qiime sample-classifier classify-samples \
 --output-dir sample_classifier_results_bodysite
 ```
 
+```
+qiime metadata tabulate \
+--m-input-file sample_classifier_results_bodysite/feature_importance.qza \
+--o-visualization sample_classifier_results_bodysite/feature_importance.qzv
+```
 ### **Questions:**
 1. Why might removing controls be important before downstream analysis? 
 2. what 2 features that are high in fecal samples? 
