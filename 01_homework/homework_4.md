@@ -114,6 +114,7 @@ qiime feature-table filter-samples \
 ```
 
 **Filter out low abundance and low prevalence ASVs ~={red}(1 point)=~**
+*10% for min-sample*
 
 ```
 qiime feature-table filter-features \
