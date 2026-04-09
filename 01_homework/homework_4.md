@@ -231,7 +231,7 @@ qiime sample-classifier classify-samples \
 
 3. what are 2 features that are low in nasal?
 
-	Two features that are low in nasal samples are...
+	Two features that are low in nasal samples are Parabacteroides_B_862066 and Ruoffia (genus level).
 
 4. what is the accuracy of your model, and if the accuracy of the classifier is high, what does that suggest about the microbial compositions of each site?
 
