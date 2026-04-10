@@ -45,9 +45,9 @@ cow_r
 
 **What directory should the cow_HW4_r.Rmd file go in? ~={red}(1 point)=~**
 
-- *Write the directory here:* **cow_r/04_code** or
+- *Write the directory here:* **cow_r/04_code** 
 
-	/Users/chayanee/Documents/2026Spring/ANEQ505/cow_r/04_code
+	(/Users/chayanee/Documents/2026Spring/ANEQ505/cow_r/04_code)
 
 #### Statistical analysis and figure generation in R 
 
