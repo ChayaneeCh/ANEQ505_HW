@@ -235,7 +235,7 @@ qiime sample-classifier classify-samples \
 3. what are 2 features that are low in nasal?
 
 	Two features that are low in nasal samples are *Fundicoccus* and *Ruoffia*. 
-	I selected features that appeared very low in the nasal samples based on the heatmap coloring. Specifically, I looked for features that were shown in dark purple (low abundance) rather than black, since black represents zero abundance (absence). I chose features that were present in other body sites but had noticeably lower abundance in the nasal row, indicating they are relatively depleted in nasal samples.
+	I selected features that appeared very low in the nasal samples based on the heatmap coloring. Specifically, I focused on features shown in dark purple (low abundance) rather than black, since black typically represents the lowest values and may indicate zero abundance (absence). Because the data are log-transformed, both true zeros and very small abundances are compressed into the same lower range of the scale, making them appear similarly dark. Therefore, black can represent either absence or near-zero abundance, so I prioritized features that showed low but detectable signal.
 
 4. what is the accuracy of your model, and if the accuracy of the classifier is high, what does that suggest about the microbial compositions of each site?
 
