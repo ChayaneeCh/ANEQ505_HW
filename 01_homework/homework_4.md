@@ -46,6 +46,9 @@ cow_r
 **What directory should the cow_HW4_r.Rmd file go in? ~={red}(1 point)=~**
 
 - *Write the directory here:* /Users/chayanee/Documents/2026Spring/ANEQ505/cow_r/04_code
+
+	or **the 04_code directory**
+
 #### Statistical analysis and figure generation in R 
 
 - Now that we have set up the correct file structure and put our files in the correct directories, we can start our cow R analysis. 
@@ -231,8 +234,8 @@ qiime sample-classifier classify-samples \
 
 3. what are 2 features that are low in nasal?
 
+	Two features that are low in nasal samples are **Parabacteroides_B_862066 and Ruoffia**. 
 	I selected features that appeared very low in the nasal samples based on the heatmap coloring. Specifically, I looked for features that were shown in dark purple (low abundance) rather than black, since black represents zero abundance (absence). I chose features that were present in other body sites but had noticeably lower abundance in the nasal row, indicating they are relatively depleted in nasal samples.
-	Two features that are low in nasal samples are **Parabacteroides_B_862066 and Ruoffia**.
 
 4. what is the accuracy of your model, and if the accuracy of the classifier is high, what does that suggest about the microbial compositions of each site?
 
