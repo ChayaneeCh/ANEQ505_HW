@@ -240,3 +240,6 @@ qiime sample-classifier classify-samples \
 4. what is the accuracy of your model, and if the accuracy of the classifier is high, what does that suggest about the microbial compositions of each site?
 
 	The overall accuracy of the model is **0.882353 (~ 88.23%)**, which is higher than the baseline accuracy (0.352941). This high accuracy indicates that microbial communities at each body site are distinct enough for the classifier to reliably differentiate between them. **Fecal, nasal, and oral samples** are classified with high accuracy that suggest to strong differences in their microbial compositions. However, some misclassification occurs between **skin and udder samples** because they might have more similar microbial communities. Overall, this shows that each body site has its own unique microbial fingerprint.
+
+
+
