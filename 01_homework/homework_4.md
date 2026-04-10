@@ -180,7 +180,7 @@ qiime composition ancombc2-visualizer \
 
 3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here: **5000**) 
 
-	The chosen value was **5000**, which matches the **rarefaction** depth used in the core diversity metrics (`--p-sampling-depth 5000`). These values must match because both steps standardize sequencing depth across samples. Using the same threshold ensures consistency across analyses and allows us to compare the same set of samples. If different values were used, this could introduce noise and potentially bias both diversity and differential abundance results.
+	The chosen value was **5000**, which matches the core metric used in the core diversity metrics (`--p-sampling-depth 5000`). These values must match because both steps standardize sequencing depth across samples. Using the same threshold ensures consistency across analyses and allows us to compare the same set of samples. If different values were used, this could introduce noise and potentially bias both diversity and differential abundance results.
 
 4. Why do we filter out samples with low frequency and low abundance ASVs?
 
