@@ -176,7 +176,7 @@ qiime composition ancombc2-visualizer \
 
 2. Which body site appeared most distinct in the taxa bar plot, meaning it was not similar to at least one of the other body sites? Explain why that site looks different. 
 
-	The **fecal samples** appeared most distinct in the taxa bar plot. This is because the gut microbiome is specialized and dominated by anaerobic bacteria, which differ from microbes found on external body sites. As a result, the microbial composition of fecal samples is significantly different from other body sites.
+	The **fecal samples** appeared most distinct in the taxa bar plot. This is because the gut microbiome is specialized and dominated by anaerobic bacteria, which differ from microbes found on external body sites. Hence, the microbial composition of fecal samples is significantly different from other body sites.
 
 3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here: **5000**) 
 
