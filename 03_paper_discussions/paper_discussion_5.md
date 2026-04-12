@@ -21,3 +21,4 @@ Overall, Figure 1B supports the conclusion that the type of complementary prote
 
 **Note:**
 
+![note](figure/discussion5.png)
