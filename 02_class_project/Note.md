@@ -21,7 +21,7 @@ qiime tools import \
 --output-path demux/demux_run2.qza
 ```
 
-**Check Data Quality:**
+Check Data Quality:
 ```
 cd demux
 ```
@@ -32,18 +32,29 @@ qiime demux summarize \
 --o-visualization demux_run2.qzv
 ```
 
-Denoise
+**Denoise**
 ```
 cd ../dada2
 ```
 
 ```
 qiime dada2 denoise-paired \
---i-demultiplexed-seqs ../demux/demux_run2.qza \  
---p-trunc-len-f 150 \  
---p-trunc-len-r 150 \  
---p-n-threads 8 \  
---o-table table_run2.qza \  
---o-representative-sequences seqs_run2.qza \  
---o-denoising-stats dada2_stats_run2.qza
+--i-demultiplexed-seqs ../demux/demux_run2.qza \
+--p-trim-left-f 0 \
+--p-trim-left-r 0 \
+--p-trunc-len-f 250 \
+--p-trunc-len-r 250 \
+--p-n-threads 6 \
+--o-representative-sequences seqs_dada2.qza \
+--o-denoising-stats dada2_stats_run2.qza \
+--o-table table_run2.qza \
+--o-base-transition-stats base-transition-stats.qza
+```
+
+visualization of each of these stats outputs
+
+```
+qiime metadata tabulate \
+--m-input-file dada2_stats_run2.qza \
+--o-visualization dada2_stats_run2.qzv
 ```
