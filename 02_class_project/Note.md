@@ -38,13 +38,31 @@ cd ../dada2
 ```
 
 ```
+#!/bin/bash
+#SBATCH --job-name=tree
+#SBATCH --nodes=1
+#SBATCH --ntasks=6
+#SBATCH --partition=amilan
+#SBATCH --time=20:00:00
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
+#SBATCH --output=slurm-%j.out
+#SBATCH --qos=normal
+
+#Activate qiime
+module purge
+module load qiime2/2024.10_amplicon
+
+#change the following line if your file path looks different
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2
+
 qiime dada2 denoise-paired \
 --i-demultiplexed-seqs ../demux/demux_run2.qza \
 --p-trim-left-f 0 \
 --p-trim-left-r 0 \
 --p-trunc-len-f 250 \
 --p-trunc-len-r 250 \
---p-n-threads 1 \
+--p-n-threads 6 \
 --o-representative-sequences seqs_dada2.qza \
 --o-denoising-stats dada2_stats_run2.qza \
 --o-table table_run2.qza \
