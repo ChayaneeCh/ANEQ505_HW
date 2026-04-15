@@ -39,9 +39,11 @@ cd ../dada2
 
 ```
 #!/bin/bash
-#SBATCH --job-name=tree
+#SBATCH --job-name=denoise
 #SBATCH --nodes=1
-#SBATCH --ntasks=6
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=64G
 #SBATCH --partition=amilan
 #SBATCH --time=20:00:00
 #SBATCH --mail-type=ALL
@@ -53,7 +55,7 @@ cd ../dada2
 module purge
 module load qiime2/2024.10_amplicon
 
-#change the following line if your file path looks different
+#Path
 cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2
 
 qiime dada2 denoise-paired \
