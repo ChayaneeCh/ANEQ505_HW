@@ -1,5 +1,5 @@
 ```
-sinteractive --time=01:00:00 --partition=amilan --nodes=1 --ntasks=2 --qos=normal
+sinteractive --time=03:00:00 --partition=amilan --nodes=1 --ntasks=2 --qos=normal
 ```
 
 ```
@@ -41,9 +41,7 @@ cd ../dada2
 #!/bin/bash
 #SBATCH --job-name=denoise
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=6
-#SBATCH --mem=64G
+#SBATCH --ntasks=12
 #SBATCH --partition=amilan
 #SBATCH --time=20:00:00
 #SBATCH --mail-type=ALL
@@ -64,7 +62,7 @@ qiime dada2 denoise-paired \
 --p-trim-left-r 0 \
 --p-trunc-len-f 250 \
 --p-trunc-len-r 250 \
---p-n-threads 6 \
+--p-n-threads 12 \
 --o-representative-sequences seqs_dada2.qza \
 --o-denoising-stats dada2_stats_run2.qza \
 --o-table table_run2.qza \
