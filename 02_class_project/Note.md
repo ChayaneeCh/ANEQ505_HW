@@ -1,11 +1,17 @@
 ```
-sinteractive --time=03:00:00 --partition=amilan --nodes=1 --ntasks=2 --qos=normal
+sinteractive --time=02:00:00 --partition=amilan --nodes=1 --ntasks=2 --qos=normal
 ```
 
 ```
 module purge
 module load qiime2/2026.1_amplicon
 ```
+
+```
+module purge
+module load qiime2/2024.10_amplicon
+```
+
 
 convert manifest (.csv) file to .txt file
 ```
