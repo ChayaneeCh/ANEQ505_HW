@@ -53,14 +53,14 @@ cd ../dada2
 #SBATCH --time=5:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=chayanee.chanpanich@colostate.edu
-#SBATCH --output=denoise(5hr)_slurm-%j.out
+#SBATCH --output=denoise_slurm-%j.out
 #SBATCH --qos=normal
 
 module purge
 module load qiime2/2026.1_amplicon
 
 #Path
-cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2_5hr
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2
 
 qiime dada2 denoise-paired \
 --i-demultiplexed-seqs ../demux/demux_run2.qza \
