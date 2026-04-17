@@ -46,7 +46,7 @@ cd ../dada2
 
 ```
 #!/bin/bash
-#SBATCH --job-name=5hr_denoise
+#SBATCH --job-name=denoise
 #SBATCH --nodes=1
 #SBATCH --ntasks=12
 #SBATCH --partition=amilan
@@ -118,20 +118,59 @@ qiime feature-classifier classify-sklearn \
 --o-classification taxonomy_gg2.qza
 ```
 
- make taxonomy into a visualization:
+ make taxonomy into a visualization: *Got Killed => submit slurm job instead*
 ```
-qiime metadata tabulate \  
---m-input-file taxonomy_gg2.qza \  
+qiime metadata tabulate \
+--m-input-file taxonomy_gg2.qza \
 --o-visualization taxonomy_gg2.qzv
 ```
 
-going to group by **type_days** (in a metadata column):
+going to group by *Treatment* (in a metadata column):
 ```
-qiime feature-table group \  
---i-table ../dada2/table_run2.qza \  
---m-metadata-file ../metadata/metadata.txt \  
---m-metadata-column type_days(EDIT HERE!!!) \  
---p-mode mean-ceiling \  
---p-axis sample \  
---o-grouped-table ../dada2/table_type_days.qza
+qiime feature-table group \
+--i-table ../dada2/table_run2.qza \
+--m-metadata-file ../metadata/metadata.tsv \
+--m-metadata-column Treatment \
+--p-mode mean-ceiling \
+--p-axis sample \
+--o-grouped-table ../dada2/table_treatment.qza
+```
+
+Slurm Job
+```
+#!/bin/bash
+#SBATCH --job-name=Taxa
+#SBATCH --nodes=1
+#SBATCH --ntasks=12
+#SBATCH --partition=amilan
+#SBATCH --time=4:00:00
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
+#SBATCH --output=Taxa_Treatment-%j.out
+#SBATCH --qos=normal
+
+module purge
+module load qiime2/2026.1_amplicon
+
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/taxonomy
+
+# Classify taxonomy
+qiime feature-classifier classify-sklearn \
+--i-reads ../dada2/seqs_dada2.qza \
+--i-classifier 2024.09.backbone.v4.nb.qza \
+--o-classification taxonomy_gg2.qza
+
+# Visualization
+qiime metadata tabulate \
+--m-input-file taxonomy_gg2.qza \
+--o-visualization taxonomy_gg2.qzv
+
+# Grouping by Treatment
+qiime feature-table group \
+--i-table ../dada2/table_run2.qza \
+--m-metadata-file ../metadata/metadata.tsv \
+--m-metadata-column Treatment \
+--p-mode mean-ceiling \
+--p-axis sample \
+--o-grouped-table ../dada2/table_treatment.qza
 ```
