@@ -12,6 +12,7 @@ module purge
 module load qiime2/2024.10_amplicon
 ```
 
+### Demultiplexing and Denoising
 
 convert manifest (.csv) file to .txt file
 ```
@@ -49,15 +50,14 @@ cd ../dada2
 #SBATCH --nodes=1
 #SBATCH --ntasks=12
 #SBATCH --partition=amilan
-#SBATCH --time=20:00:00
+#SBATCH --time=2:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=chayanee.chanpanich@colostate.edu
-#SBATCH --output=slurm-%j.out
+#SBATCH --output=denoise_slurm-%j.out
 #SBATCH --qos=normal
 
-#Activate qiime
 module purge
-module load qiime2/2024.10_amplicon
+module load qiime2/2026.1_amplicon
 
 #Path
 cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2
@@ -81,4 +81,27 @@ visualization of each of these stats outputs
 qiime metadata tabulate \
 --m-input-file dada2_stats_run2.qza \
 --o-visualization dada2_stats_run2.qzv
+```
+
+DADA2 TABLE FILE:
+```
+qiime feature-table summarize \
+--i-table table_run2.qza \
+--o-visualization table.qzv \
+--m-sample-metadata-file ../metadata/metadata.txt
+```
+
+DADA2 SEQS FILE:
+```
+qiime feature-table tabulate-seqs \
+--i-data seqs_dada2.qza \
+--o-visualization seqs.qzv
+```
+
+### Taxonomy, Taxa Barplots, Filtering, Phylogenetic Tree
+
+download classifier
+
+```
+wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2024.09.backbone.v4.nb.qza
 ```
