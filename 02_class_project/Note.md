@@ -46,21 +46,21 @@ cd ../dada2
 
 ```
 #!/bin/bash
-#SBATCH --job-name=denoise
+#SBATCH --job-name=5hr_denoise
 #SBATCH --nodes=1
 #SBATCH --ntasks=12
 #SBATCH --partition=amilan
-#SBATCH --time=2:00:00
+#SBATCH --time=5:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=chayanee.chanpanich@colostate.edu
-#SBATCH --output=denoise_slurm-%j.out
+#SBATCH --output=denoise(5hr)_slurm-%j.out
 #SBATCH --qos=normal
 
 module purge
 module load qiime2/2026.1_amplicon
 
 #Path
-cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2_5hr
 
 qiime dada2 denoise-paired \
 --i-demultiplexed-seqs ../demux/demux_run2.qza \
@@ -75,8 +75,7 @@ qiime dada2 denoise-paired \
 --o-base-transition-stats base-transition-stats.qza
 ```
 
-visualization of each of these stats outputs
-
+visualization of each of these stats outputs:
 ```
 qiime metadata tabulate \
 --m-input-file dada2_stats_run2.qza \
