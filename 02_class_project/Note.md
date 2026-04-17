@@ -174,3 +174,13 @@ qiime feature-table group \
 --p-axis sample \
 --o-grouped-table ../dada2/table_treatment.qza
 ```
+
+**Remove contaminating features: RECHECK!!**
+```
+qiime taxa filter-table \
+--i-table ../dada2/table_type_days.qza \
+--i-taxonomy taxonomy_gg2.qza \
+--p-exclude mitochondria,chloroplast,sp004296775 \
+--p-include c__ \
+--o-filtered-table ../dada2/table_type_days_nomitochloro.qza
+```
