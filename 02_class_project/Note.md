@@ -39,7 +39,7 @@ qiime demux summarize \
 --o-visualization demux_run2.qzv
 ```
 
-**Denoise**
+**Denoise (2026 version)**
 ```
 cd ../dada2
 ```
@@ -50,7 +50,7 @@ cd ../dada2
 #SBATCH --nodes=1
 #SBATCH --ntasks=12
 #SBATCH --partition=amilan
-#SBATCH --time=5:00:00
+#SBATCH --time=2:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 #SBATCH --output=denoise_slurm-%j.out
@@ -82,14 +82,13 @@ qiime metadata tabulate \
 --o-visualization dada2_stats_run2.qzv
 ```
 
-**maybe change metadata file first!!!-Let's check**
-
-DADA2 TABLE FILE:
+DADA2 TABLE FILE (2026 version):
 ```
 qiime feature-table summarize \
---i-table table_run2.qza \
---o-visualization table.qzv \
---m-sample-metadata-file ../metadata/metadata.tsv
+  --i-table table_run2.qza \
+  --o-feature-frequencies feature-frequencies.qza \
+  --o-sample-frequencies sample-frequencies.qza \
+  --o-summary dada2_visual_summary.qzv
 ```
 
 DADA2 SEQS FILE:
@@ -101,6 +100,11 @@ qiime feature-table tabulate-seqs \
 
 ### Taxonomy, Taxa Barplots, Filtering, Phylogenetic Tree
 
+Go to the taxonomy folder:
+```
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/taxonomy
+```
+
 download classifier:
 ```
 wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2024.09.backbone.v4.nb.qza
@@ -108,9 +112,9 @@ wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2
 
 classify taxonomy:
 ```
-qiime feature-classifier classify-sklearn \  
---i-reads ../dada2/seqs_dada2.qza \  
---i-classifier 2024.09.backbone.v4.nb.qza \  
+qiime feature-classifier classify-sklearn \
+--i-reads ../dada2/seqs_dada2.qza \
+--i-classifier 2024.09.backbone.v4.nb.qza \
 --o-classification taxonomy_gg2.qza
 ```
 
