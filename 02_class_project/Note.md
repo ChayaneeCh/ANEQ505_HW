@@ -83,7 +83,7 @@ qiime metadata tabulate \
 --o-visualization dada2_stats_run2.qzv
 ```
 
-**maybe change metadata file first!!!**
+**maybe change metadata file first!!!-Let's check**
 
 DADA2 TABLE FILE:
 ```
@@ -125,7 +125,7 @@ qiime metadata tabulate \
 going to group by **type_days** (in a metadata column):
 ```
 qiime feature-table group \  
---i-table ../dada2/table.qza \  
+--i-table ../dada2/table_run2.qza \  
 --m-metadata-file ../metadata/metadata.txt \  
 --m-metadata-column type_days(EDIT HERE!!!) \  
 --p-mode mean-ceiling \  
