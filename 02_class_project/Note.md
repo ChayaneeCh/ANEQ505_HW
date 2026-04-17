@@ -83,12 +83,14 @@ qiime metadata tabulate \
 --o-visualization dada2_stats_run2.qzv
 ```
 
+**maybe change metadata file first!!!**
+
 DADA2 TABLE FILE:
 ```
 qiime feature-table summarize \
 --i-table table_run2.qza \
 --o-visualization table.qzv \
---m-sample-metadata-file ../metadata/metadata.txt
+--m-sample-metadata-file ../metadata/metadata.tsv
 ```
 
 DADA2 SEQS FILE:
@@ -100,8 +102,33 @@ qiime feature-table tabulate-seqs \
 
 ### Taxonomy, Taxa Barplots, Filtering, Phylogenetic Tree
 
-download classifier
-
+download classifier:
 ```
 wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2024.09.backbone.v4.nb.qza
+```
+
+classify taxonomy:
+```
+qiime feature-classifier classify-sklearn \  
+--i-reads ../dada2/seqs_dada2.qza \  
+--i-classifier 2024.09.backbone.v4.nb.qza \  
+--o-classification taxonomy_gg2.qza
+```
+
+ make taxonomy into a visualization:
+```
+qiime metadata tabulate \  
+--m-input-file taxonomy_gg2.qza \  
+--o-visualization taxonomy_gg2.qzv
+```
+
+going to group by **type_days** (in a metadata column):
+```
+qiime feature-table group \  
+--i-table ../dada2/table.qza \  
+--m-metadata-file ../metadata/metadata.txt \  
+--m-metadata-column type_days(EDIT HERE!!!) \  
+--p-mode mean-ceiling \  
+--p-axis sample \  
+--o-grouped-table ../dada2/table_type_days.qza
 ```
