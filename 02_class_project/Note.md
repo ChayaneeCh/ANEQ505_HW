@@ -185,8 +185,9 @@ qiime taxa filter-table \
 --o-filtered-table ../dada2/table_treatment_nomitochloro.qza
 ```
 
-Go to the taxa plots directory: `cd ../taxaplots`
+**Taxa Bar Plot**
 
+Go to the taxa plots directory: `cd ../taxaplots`
 Generate the taxa bar plot:
 ```
 qiime taxa barplot \
@@ -199,8 +200,66 @@ qiime taxa barplot \
 Filter samples:
 ```
 qiime feature-table filter-samples \
---i-table ../dada2/table.qza \
+--i-table ../dada2/table_run2.qza \
 --m-metadata-file ../metadata/metadata.tsv \
---p-where "[Treatment]='control'" \
+--p-where "[Treatment]='Control'" \
 --o-filtered-table ../dada2/table_controls.qza
+```
+Create a taxa barplot with our table with just controls:
+```
+qiime taxa barplot \
+--i-table ../dada2/table_controls.qza \
+--i-taxonomy ../taxonomy/taxonomy_gg2.qza \
+--m-metadata-file ../metadata/metadata.tsv \
+--o-visualization taxa_barplot_controls.qzv
+```
+
+*Create the full taxa bar plot of all the samples*
+```
+qiime taxa filter-table \
+--i-table ../dada2/table_run2.qza \
+--i-taxonomy taxonomy_gg2.qza \
+--p-exclude mitochondria,chloroplast,sp004296775 \
+--p-include c__ \
+--o-filtered-table ../dada2/table_nomitochloro.qza  
+  
+#visualize:   
+qiime taxa barplot \
+--i-table ../dada2/table_nomitochloro.qza \
+--i-taxonomy ../taxonomy/taxonomy_gg2.qza \
+--m-metadata-file ../metadata/metadata.tsv \
+--o-visualization taxa_barplot_all_samples.qzv
+```
+
+**Phylogenetic Trees**
+
+Go to the tree directory: `cd ../tree`
+Get the reference backbone:
+```
+wget https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
+```
+
+Create Slurm Job:
+```
+#!/bin/bash  
+#SBATCH --job-name=sepp  
+#SBATCH --nodes=1  
+#SBATCH --ntasks=24  
+#SBATCH --partition=amilan  
+#SBATCH --time=04:00:00  
+#SBATCH --mail-type=ALL  
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
+#SBATCH --output=sepp_slurm-%j.out  
+#SBATCH --qos=normal  
+  
+  
+#Activate qiime  
+module purge
+module load qiime2/2026.1_amplicon
+  
+# go to your decomp directory  
+cd /scratch/alpine/$USER/soil_project
+
+#frament insertion sepp  
+qiime fragment-insertion sepp \--i-representative-sequences dada2/seqs.qza \--i-reference-database tree/2022.10.backbone.sepp-reference.qza \--o-tree tree/tree_gg2.qza \--o-placements tree/tree_gg2_placements.qza \--p-threads 4
 ```
