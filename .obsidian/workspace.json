@@ -11,10 +11,14 @@
             "id": "ab92fca5da54f6f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "02_class_project/Note(current).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Note(current)"
             }
           }
         ]
