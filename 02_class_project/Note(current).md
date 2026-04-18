@@ -78,7 +78,7 @@ qiime metadata tabulate \
 
 # DADA2 TABLE FILE (2026 version):
 qiime feature-table summarize \
-  --i-table table_run2.qza \
+  --i-table table.qza \
   --o-feature-frequencies feature-frequencies.qza \
   --o-sample-frequencies sample-frequencies.qza \
   --o-summary dada2_visual_summary.qzv

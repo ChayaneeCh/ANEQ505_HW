@@ -77,7 +77,7 @@ qiime metadata tabulate \
 --o-visualization dada2_stats_run2.qzv
 ```
 
-DADA2 TABLE FILE (2026 version):
+*DADA2 TABLE FILE (2026 version):*
 ```
 qiime feature-table summarize \
   --i-table table_run2.qza \
@@ -92,6 +92,16 @@ qiime feature-table tabulate-seqs \
 --i-data seqs_dada2.qza \
 --o-visualization seqs.qzv
 ```
+
+
+
+
+
+
+
+
+
+
 
 ### Taxonomy, Taxa Barplots, Filtering, Phylogenetic Tree (based on tutorial)
 
