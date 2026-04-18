@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "949f8e865a283de3",
@@ -197,8 +196,9 @@
   },
   "active": "4e52043d090e1fe9",
   "lastOpenFiles": [
-    "01_homework/homework_4.md",
+    "02_class_project/Workflow.md",
     "02_class_project/Note.md",
+    "01_homework/homework_4.md",
     "01_homework/homework_1.md",
     "01_homework/homework_2.md",
     "01_homework/homework_3.md",

@@ -98,7 +98,7 @@ qiime feature-table tabulate-seqs \
 --o-visualization seqs.qzv
 ```
 
-### Taxonomy, Taxa Barplots, Filtering, Phylogenetic Tree
+### Taxonomy, Taxa Barplots, Filtering, Phylogenetic Tree (based on tutorial)
 
 Go to the taxonomy folder:
 ```
@@ -271,6 +271,4 @@ qiime fragment-insertion sepp \
 --p-threads 4
 ```
 
-
-### Alpha Rarefaction, Core Metrics, Alpha Diversity Plots
-
+### Alpha Rarefaction, Core Metrics, Alpha Diversity Plots (based on tutorial)
