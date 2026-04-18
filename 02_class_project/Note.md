@@ -215,15 +215,17 @@ qiime taxa barplot \
 ```
 
 *Create the full taxa bar plot of all the samples*
+Go to taxonomy folder:
 ```
 qiime taxa filter-table \
 --i-table ../dada2/table_run2.qza \
 --i-taxonomy taxonomy_gg2.qza \
 --p-exclude mitochondria,chloroplast,sp004296775 \
 --p-include c__ \
---o-filtered-table ../dada2/table_nomitochloro.qza  
-  
-#visualize:   
+--o-filtered-table ../dada2/table_nomitochloro.qza
+```
+Go to taxaplots folder: Visualize (full taxa bar plot)
+``` 
 qiime taxa barplot \
 --i-table ../dada2/table_nomitochloro.qza \
 --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
@@ -241,25 +243,34 @@ wget https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-re
 
 Create Slurm Job:
 ```
-#!/bin/bash  
-#SBATCH --job-name=sepp  
-#SBATCH --nodes=1  
-#SBATCH --ntasks=24  
-#SBATCH --partition=amilan  
-#SBATCH --time=04:00:00  
-#SBATCH --mail-type=ALL  
+#!/bin/bash
+#SBATCH --job-name=sepp
+#SBATCH --nodes=1
+#SBATCH --ntasks=24
+#SBATCH --partition=amilan
+#SBATCH --time=04:00:00
+#SBATCH --mail-type=ALL
 #SBATCH --mail-user=chayanee.chanpanich@colostate.edu
-#SBATCH --output=sepp_slurm-%j.out  
-#SBATCH --qos=normal  
-  
-  
-#Activate qiime  
+#SBATCH --output=sepp_slurm-%j.out
+#SBATCH --qos=normal
+
+
+#Activate qiime
 module purge
 module load qiime2/2026.1_amplicon
-  
-# go to your decomp directory  
+
+# go to your decomp directory
 cd /scratch/alpine/$USER/soil_project
 
-#frament insertion sepp  
-qiime fragment-insertion sepp \--i-representative-sequences dada2/seqs.qza \--i-reference-database tree/2022.10.backbone.sepp-reference.qza \--o-tree tree/tree_gg2.qza \--o-placements tree/tree_gg2_placements.qza \--p-threads 4
+#frament insertion sepp
+qiime fragment-insertion sepp \
+--i-representative-sequences dada2/seqs_dada2.qza \
+--i-reference-database tree/2022.10.backbone.sepp-reference.qza \
+--o-tree tree/tree_gg2.qza \
+--o-placements tree/tree_gg2_placements.qza \
+--p-threads 4
 ```
+
+
+### Alpha Rarefaction, Core Metrics, Alpha Diversity Plots
+
