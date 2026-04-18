@@ -7,11 +7,6 @@ module purge
 module load qiime2/2026.1_amplicon
 ```
 
-```
-module purge
-module load qiime2/2024.10_amplicon
-```
-
 ### Demultiplexing and Denoising
 
 convert manifest (.csv) file to .txt file
@@ -271,4 +266,3 @@ qiime fragment-insertion sepp \
 --p-threads 4
 ```
 
-### Alpha Rarefaction, Core Metrics, Alpha Diversity Plots (based on tutorial)
