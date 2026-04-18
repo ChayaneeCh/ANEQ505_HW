@@ -1,5 +1,5 @@
 ```
-sinteractive --time=02:00:00 --partition=amilan --nodes=1 --ntasks=2 --qos=normal
+sinteractive --time=01:00:00 --partition=amilan --nodes=1 --ntasks=2 --qos=normal
 ```
 
 ```
@@ -175,12 +175,32 @@ qiime feature-table group \
 --o-grouped-table ../dada2/table_treatment.qza
 ```
 
-**Remove contaminating features: RECHECK!!**
+Remove contaminating features:
 ```
 qiime taxa filter-table \
---i-table ../dada2/table_type_days.qza \
+--i-table ../dada2/table_treatment.qza \
 --i-taxonomy taxonomy_gg2.qza \
 --p-exclude mitochondria,chloroplast,sp004296775 \
 --p-include c__ \
---o-filtered-table ../dada2/table_type_days_nomitochloro.qza
+--o-filtered-table ../dada2/table_treatment_nomitochloro.qza
+```
+
+Go to the taxa plots directory: `cd ../taxaplots`
+
+Generate the taxa bar plot:
+```
+qiime taxa barplot \
+--i-table ../dada2/table_treatment_nomitochloro.qza \
+--i-taxonomy ../taxonomy/taxonomy_gg2.qza \
+--o-visualization taxa_barplot_treatment_nomitochloro.qzv
+```
+
+*Check the controls*
+Filter samples:
+```
+qiime feature-table filter-samples \
+--i-table ../dada2/table.qza \
+--m-metadata-file ../metadata/metadata.tsv \
+--p-where "[Treatment]='control'" \
+--o-filtered-table ../dada2/table_controls.qza
 ```
