@@ -1,0 +1,6 @@
+
+### Longitudinal dynamics of farmer and livestock nasal and faecal microbiomes and resistomes (Additional Analysis)
+Additional or Future Analysis: provide an idea for an analysis they could have done for the
+paper or how this data could be continued. what would you do?
+
+
