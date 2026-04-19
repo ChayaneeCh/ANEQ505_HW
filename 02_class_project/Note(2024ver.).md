@@ -27,8 +27,9 @@ qiime demux summarize \
 --i-data demux.qza \
 --o-visualization demux.qzv
 ```
+
 # Denoise
-## Slurm script contents
+
 ```
 #!/bin/bash
 #SBATCH --job-name=denoise
@@ -72,16 +73,9 @@ qiime feature-table tabulate-seqs \
 --i-data rep_seqs.qza \
 --o-visualization rep_seqs.qzv
 ```
-## Run Slurm script
-```
-sbatch denoise.sh
-```
-
-
-
 
 # Filter out large ASVs (off-target taxa)
-## Slurm script contents
+
 ```
 #!/bin/bash
 #SBATCH --job-name=filter300
@@ -92,14 +86,14 @@ sbatch denoise.sh
 #SBATCH --mail-type=ALL
 #SBATCH --output=slurm-%j.out
 #SBATCH --qos=normal
-#SBATCH --mail-user=sarah.spotten@colostate.edu
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
 # Activate QIIME2
 module purge
 module load qiime2/2024.10_amplicon
 
 # Change directory
-cd /scratch/alpine/$USER/aneq505/drought_soils/dada2
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2
 
 # Filter out large ASVs (off-target taxa)
 qiime feature-table filter-seqs \
@@ -122,6 +116,10 @@ qiime feature-table summarize \
 --m-sample-metadata-file ../metadata/metadata.tsv \
 --o-visualization table_filtered300.qzv
 ```
+
+
+
+
 # Taxonomic classification
 ## Download pre-trained Greengenes2 classifier
 ```
