@@ -350,14 +350,14 @@ Make a new directory called `ancombc2` in the `drought_soils` folder.
 #SBATCH --mail-type=ALL
 #SBATCH --output=slurm-%j.out
 #SBATCH --qos=normal
-#SBATCH --mail-user=sarah.spotten@colostate.edu
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
 # Activate QIIME2
 module purge
 module load qiime2/2026.1_amplicon
 
 # Change directory
-cd /scratch/alpine/$USER/aneq505/drought_soils/ancombc2
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/ancombc2
 
 # Filter to same depth as alpha rarefaction
 qiime feature-table filter-samples \
