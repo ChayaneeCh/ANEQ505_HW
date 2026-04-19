@@ -84,7 +84,7 @@ qiime feature-table tabulate-seqs \
 #SBATCH --partition=amilan
 #SBATCH --time=02:00:00
 #SBATCH --mail-type=ALL
-#SBATCH --output=slurm-%j.out
+#SBATCH --output=filterslurm-%j.out
 #SBATCH --qos=normal
 #SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
@@ -92,7 +92,7 @@ qiime feature-table tabulate-seqs \
 module purge
 module load qiime2/2024.10_amplicon
 
-# Change directory
+# Directory
 cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2
 
 # Filter out large ASVs (off-target taxa)
@@ -110,7 +110,7 @@ qiime feature-table filter-features \
 --i-table table.qza \
 --m-metadata-file rep_seqs_filtered300.qza \
 --o-filtered-table table_filtered300.qza
-  
+
 qiime feature-table summarize \
 --i-table table_filtered300.qza \
 --m-sample-metadata-file ../metadata/metadata.tsv \
