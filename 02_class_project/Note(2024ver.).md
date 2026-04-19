@@ -8,6 +8,11 @@ module purge
 module load qiime2/2024.10_amplicon
 ```
 
+**convert manifest (.csv) file to .txt file:**
+```
+tr ',' '\t' < manifest_run2_16S.csv > manifest_run2.txt
+```
+
 **Import File:**
 ```
 qiime tools import \
@@ -265,9 +270,8 @@ qiime fragment-insertion sepp \
 
 # Rarefaction
 
-**Filter lab controls from samples**
+**Filter lab controls from samples:** Run in outer drought_soils directory
 ```
-# Run in outer drought_soils directory
 qiime feature-table filter-samples \
 --i-table dada2/table_nomitochloro_gg2_filtered300.qza \
 --m-metadata-file metadata/metadata.tsv \
@@ -278,7 +282,9 @@ qiime feature-table filter-samples \
 **Generate alpha rarefaction curve**
 ```
 cd alpha_rarefaction
+```
 
+```
 qiime diversity alpha-rarefaction \
 --i-table ../dada2/table_nomitochloro_nocontrol.qza \
 --m-metadata-file ../metadata/metadata.tsv \
@@ -289,30 +295,27 @@ qiime diversity alpha-rarefaction \
 Looking at this alpha rarefaction curve, it appears that 14,000 reads is a decent rarefaction threshold to start at.
 
 
-
-
-
-
 # Core metrics
-## Core metrics Slurm script (--p-sampling-depth 14000)
+
+Set **sampling depth as 14000** (--p-sampling-depth 14000)
 ```
 #!/bin/bash
 #SBATCH --job-name=core_metrics
 #SBATCH --nodes=1
 #SBATCH --ntasks=8
 #SBATCH --partition=amilan
-#SBATCH --time=02:00:00
+#SBATCH --time=03:00:00
 #SBATCH --mail-type=ALL
-#SBATCH --output=slurm-%j.out
+#SBATCH --output=coremetric_slurm-%j.out
 #SBATCH --qos=normal
-#SBATCH --mail-user=sarah.spotten@colostate.edu
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
 # Activate QIIME2
 module purge
 module load qiime2/2024.10_amplicon
 
 # Change directory
-cd /scratch/alpine/$USER/aneq505/drought_soils
+cd /scratch/alpine/c837238655@colostate.edu/soil_project
 
 qiime diversity core-metrics-phylogenetic \
 --i-table dada2/table_nomitochloro_nocontrol.qza \
@@ -331,15 +334,10 @@ qiime diversity alpha-group-significance \
 --m-metadata-file metadata/metadata.tsv \
 --o-visualization core_metrics_results/faiths_pd_statistics.qzv
 ```
-## Run Slurm script
-```
-sbatch core_metrics.sh
-```
-
-
 
 
 # Differential abundance analysis
+
 Note that ANCOM-BC2 is only available in versions of QIIME2 from 2026 onward.
 Make a new directory called `ancombc2` in the `drought_soils` folder.
 ```
