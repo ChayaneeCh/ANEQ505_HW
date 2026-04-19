@@ -118,18 +118,19 @@ qiime feature-table summarize \
 ```
 
 
-
-
 # Taxonomic classification
-## Download pre-trained Greengenes2 classifier
+
+**Download Greengenes2 classifier:**
 ```
 mkdir taxonomy
-
 cd taxonomy
+```
 
+```
 wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2024.09.backbone.v4.nb.qza
 ```
-## Taxonomic classification Slurm script
+
+**Slurm script:**
 ```
 #!/bin/bash
 #SBATCH --job-name=taxonomy
@@ -138,16 +139,16 @@ wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2
 #SBATCH --partition=amilan
 #SBATCH --time=02:00:00
 #SBATCH --mail-type=ALL
-#SBATCH --output=slurm-%j.out
+#SBATCH --output=taxonomyslurm-%j.out
 #SBATCH --qos=normal
-#SBATCH --mail-user=sarah.spotten@colostate.edu
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
 # Activate QIIME2
 module purge
 module load qiime2/2024.10_amplicon
 
-# Change directory
-cd /scratch/alpine/$USER/aneq505/drought_soils/taxonomy
+# Directory
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/taxonomy
 
 # Classify using Greengenes2 pre-trained classifier
 qiime feature-classifier classify-sklearn \
@@ -160,12 +161,10 @@ qiime metadata tabulate \
 --m-input-file taxonomy_gg2_filtered300.qza \
 --o-visualization taxonomy_gg2_filtered300.qzv
 ```
-## Run Slurm script
-```
-sbatch taxonomy.sh
-```
+
+
 Inspect output for off-target taxa.
-# Filter feature table by taxonomy and generate taxa barplots
+Filter feature table by taxonomy and generate taxa barplots
 ```
 #!/bin/bash
 #SBATCH --job-name=filter_taxonomy_barplots
@@ -174,16 +173,16 @@ Inspect output for off-target taxa.
 #SBATCH --partition=amilan
 #SBATCH --time=02:00:00
 #SBATCH --mail-type=ALL
-#SBATCH --output=slurm-%j.out
+#SBATCH --output=filtertaxoslurm-%j.out
 #SBATCH --qos=normal
-#SBATCH --mail-user=sarah.spotten@colostate.edu
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
 # Activate QIIME2
 module purge
 module load qiime2/2024.10_amplicon
 
-# Change directory
-cd /scratch/alpine/$USER/aneq505/drought_soils/taxonomy
+# Directory
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/taxonomy
 
 # Filter feature table to remove mitochondria and chloroplasts
 qiime taxa filter-table \

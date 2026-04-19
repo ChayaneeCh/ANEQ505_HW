@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6644f95a8d8dd107",
+        "id": "42215f01c4ebc174",
         "type": "tabs",
         "children": [
           {
-            "id": "ab92fca5da54f6f2",
+            "id": "f38e6b9987bf75c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -194,11 +194,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "87419d21325c8c73",
+  "active": "f38e6b9987bf75c3",
   "lastOpenFiles": [
-    "02_class_project/Note(current).md",
     "02_class_project/Note(2024ver.).md",
     "02_class_project/Note(old).md",
+    "02_class_project/Note(current).md",
     "01_homework/homework_4.md",
     "01_homework/homework_1.md",
     "01_homework/homework_2.md",
