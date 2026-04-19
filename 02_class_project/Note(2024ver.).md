@@ -162,7 +162,6 @@ qiime metadata tabulate \
 --o-visualization taxonomy_gg2_filtered300.qzv
 ```
 
-
 Inspect output for off-target taxa.
 Filter feature table by taxonomy and generate taxa barplots
 ```
@@ -223,8 +222,8 @@ qiime taxa barplot \
 Inspect controls for patterns that look like real samples. (In our case, lab controls look like very low-abundance, which suggests very minor contamination.)
 
 
-
 # Phylogenetic tree
+
 Get Greengenes2 backbone for SEPP insertion tree
 ```
 cd ../tree
@@ -234,7 +233,7 @@ cd ../tree
 wget https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
 ```
 
-Phylogenetic tree Slurm script
+Phylogenetic tree Slurm script:
 ```
 #!/bin/bash
 #SBATCH --job-name=sepp_tree
@@ -265,7 +264,8 @@ qiime fragment-insertion sepp \
 
 
 # Rarefaction
-## Filter lab controls from samples
+
+**Filter lab controls from samples**
 ```
 # Run in outer drought_soils directory
 qiime feature-table filter-samples \
@@ -274,7 +274,8 @@ qiime feature-table filter-samples \
 --p-where "NOT [Treatment] IN ('Lab Control') " \
 --o-filtered-table dada2/table_nomitochloro_nocontrol.qza
 ```
-## Generate alpha rarefaction curve
+
+**Generate alpha rarefaction curve**
 ```
 cd alpha_rarefaction
 
@@ -284,7 +285,14 @@ qiime diversity alpha-rarefaction \
 --p-max-depth 35000 \
 --o-visualization alpha_rarefaction_curves.qzv
 ```
+
 Looking at this alpha rarefaction curve, it appears that 14,000 reads is a decent rarefaction threshold to start at.
+
+
+
+
+
+
 # Core metrics
 ## Core metrics Slurm script (--p-sampling-depth 14000)
 ```
@@ -327,6 +335,10 @@ qiime diversity alpha-group-significance \
 ```
 sbatch core_metrics.sh
 ```
+
+
+
+
 # Differential abundance analysis
 Note that ANCOM-BC2 is only available in versions of QIIME2 from 2026 onward.
 Make a new directory called `ancombc2` in the `drought_soils` folder.
