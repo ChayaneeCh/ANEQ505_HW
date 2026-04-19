@@ -34,14 +34,14 @@ qiime demux summarize \
 #SBATCH --mail-type=ALL
 #SBATCH --output=slurm-%j.out
 #SBATCH --qos=normal
-#SBATCH --mail-user=sarah.spotten@colostate.edu
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
 # Activate QIIME2
 module purge
 module load qiime2/2024.10_amplicon
 
 # Change directory
-cd /scratch/alpine/$USER/aneq505/drought_soils/dada2
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/dada2
 
 # Denoise with DADA2
 qiime dada2 denoise-paired \
@@ -71,6 +71,10 @@ qiime feature-table tabulate-seqs \
 ```
 sbatch denoise.sh
 ```
+
+
+
+
 # Filter out large ASVs (off-target taxa)
 ## Slurm script contents
 ```

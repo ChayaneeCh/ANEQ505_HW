@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_class_project/Note(current).md",
+                "file": "02_class_project/Workflow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Note(current)"
+              "title": "Workflow"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "ab92fca5da54f6f2",
   "lastOpenFiles": [
-    "02_class_project/Workflow.md",
     "02_class_project/Note(current).md",
+    "02_class_project/Workflow.md",
     "02_class_project/Note(old).md",
     "01_homework/homework_4.md",
     "01_homework/homework_1.md",
