@@ -219,19 +219,22 @@ qiime taxa barplot \
 --m-metadata-file ../metadata/metadata.tsv \
 --o-visualization taxa_barplot_controls.qzv
 ```
-## Run Slurm script
-```
-sbatch filter_taxonomy_barplots.sh
-```
+
 Inspect controls for patterns that look like real samples. (In our case, lab controls look like very low-abundance, which suggests very minor contamination.)
+
+
+
 # Phylogenetic tree
-## Get Greengenes2 backbone for SEPP insertion tree
+Get Greengenes2 backbone for SEPP insertion tree
 ```
 cd ../tree
+```
 
+```
 wget https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
 ```
-## Phylogenetic tree Slurm script
+
+Phylogenetic tree Slurm script
 ```
 #!/bin/bash
 #SBATCH --job-name=sepp_tree
@@ -240,16 +243,16 @@ wget https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-re
 #SBATCH --partition=amilan
 #SBATCH --time=04:00:00
 #SBATCH --mail-type=ALL
-#SBATCH --output=slurm-%j.out
+#SBATCH --output=seppslurm-%j.out
 #SBATCH --qos=normal
-#SBATCH --mail-user=sarah.spotten@colostate.edu
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
 # Activate QIIME2
 module purge
 module load qiime2/2024.10_amplicon
 
-# Change directory
-cd /scratch/alpine/$USER/aneq505/drought_soils/tree
+# Directory
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/tree
 
 # SEPP fragment insertion tree
 qiime fragment-insertion sepp \
@@ -259,10 +262,8 @@ qiime fragment-insertion sepp \
 --o-placements tree_gg2_placements.qza \
 --p-threads 24
 ```
-## Run Slurm script
-```
-sbatch sepp_tree.sh
-```
+
+
 # Rarefaction
 ## Filter lab controls from samples
 ```
