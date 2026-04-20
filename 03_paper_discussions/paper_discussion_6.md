@@ -5,9 +5,9 @@ Additional or Future Analysis: provide an idea for an analysis they could have d
 paper or how this data could be continued. what would you do?
 
 
-**Mentioned Future Work:**
+**Interesting Future Work:**
 
-1. Clarify transmission routes 
+1. Clarify transmission routes (Partially study in this article)
 	`The origins of the similarities between the nasal communities of cows and farmers remain to be elucidated in future investigations. (p.2)` \
 	Reason: Current data cannot distinguish between:
 		- Direct animal–human transfer
