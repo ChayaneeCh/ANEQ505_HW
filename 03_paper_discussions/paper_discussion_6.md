@@ -24,9 +24,7 @@ paper or how this data could be continued. what would you do?
 		- Investigate horizontal gene transfer & microbial competition
 
 3. Broader future research directions
-4. ### Reason
-
-- Microbiome changes may be influenced by other variables:
+	Reason: Microbiome changes may be influenced by other variables:
     
     > “future studies are warranted…” 
     
