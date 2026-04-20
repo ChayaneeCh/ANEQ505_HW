@@ -53,13 +53,12 @@ paper or how this data could be continued. what would you do?
 The findings are largely correlative, not causal. Key uncertainties remain regarding:
 - How microbes and ARGs are transmitted (direct vs environmental routes)
 - What mechanisms enable their persistence and spread
-- **How these changes impact human health**
+- How these changes impact human health
 
-Future work must therefore:
+Future work must therefore: \
+- Use strain-level, longitudinal, and environmental approaches to resolve transmission pathways
+- Investigate mechanistic processes such as colonization and horizontal gene transfer
+- Apply multivariate and systems-level analyses to account for confounding factors
+- Adopt a One Health framework integrating human, animal, and environmental data
 
-- Use **strain-level, longitudinal, and environmental approaches** to resolve transmission pathways
-- Investigate **mechanistic processes** such as colonization and horizontal gene transfer
-- Apply **multivariate and systems-level analyses** to account for confounding factors
-- Adopt a **One Health framework** integrating human, animal, and environmental data
-
-👉 Overall, advancing this field requires moving from **observing shared microbiomes** to **understanding the causal pathways and public health consequences of their interaction**.
+Overall, advancing this field requires moving from observing shared microbiomes to understanding the causal pathways and public health consequences of their interaction.
