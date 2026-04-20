@@ -19,20 +19,19 @@ paper or how this data could be continued. what would you do?
 	Shared microbes are observed, but: `future investigations are needed to establish the mechanisms underlying the co-occurrence of microbes in farmers and cows. (p.5)` \
 	p.s. mechanistic elucidation of the impacts of identified microbial signatures on farmer health and disease was beyond the scope of this work. \
 	Address:
-		- Use metagenome-assembled genomes (MAGs) and **strain tracking** 
+		- Use metagenome-assembled genomes (MAGs) and strain tracking
 		- Study host–microbe interactions (immune response, colonization ability)
 		- Investigate horizontal gene transfer & microbial competition
 
 3. Broader future research directions
 	Reason: Microbiome changes may be influenced by other variables: \
-	`Specifically, future studies are warranted to determine whether and how diet and antibiotics facilitate the acquisition, maintenance or amplification of farm- and livestock-associated microbes, as well as their ARGs.` \
-	*Farming exposure alone doesn’t explain everything*
+	`Specifically, future studies are warranted to determine whether and how diet and antibiotics facilitate the acquisition, maintenance or amplification of farm- and livestock-associated microbes, as well as their ARGs. (p.9)` \
+	*Farming exposure alone doesn’t explain everything* \
+	Address:
+		- Integrate: Dietary data, Antibiotic exposure, and Lifestyle/environmental factors
+		- Apply multivariate and systems-level analyses
+		- Use a One Health framework (human–animal–environment together)
 
-### ⚙️ How to address
-
-- Integrate:
-    - **Dietary data**
-    - **Antibiotic exposure**
-    - **Lifestyle/environmental factors**
-- Apply **multivariate and systems-level analyses**
-- Use a **One Health framework** (human–animal–environment together)
+4. Limitation (for this paper)
+	`We emphasize that mechanistic elucidation of the impacts of identified microbial signatures on farmer health and disease was beyond the scope of this work.(p.7)` \
+	
