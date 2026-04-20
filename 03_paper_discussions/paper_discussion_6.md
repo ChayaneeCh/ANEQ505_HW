@@ -8,6 +8,36 @@ paper or how this data could be continued. what would you do?
 1. Clarify transmission routes 
 	`The origins of the similarities between the nasal communities of cows and farmers **remain to be elucidated in future investigations**. (p.2)` \
 	Reason: Current data cannot distinguish between:
-		- Direct transfer (animal -> human)
+		- Direct animal–human transfer
 		- Shared environment (air, surfaces, feed)
-2. Mechanisms of microbial co-occurrence
+	Address: 
+		- Perform strain-level tracking (same strain in cow → farmer)
+		- Include environmental sampling (air, surfaces, feed, water)
+		- Use time-resolved longitudinal data to detect directionality
+
+2. Mechanisms of microbial co-occurrence 
+	Shared microbes are observed, but: `future investigations are needed to establish the mechanisms underlying the co-occurrence of microbes in farmers and cows. (p.5)` \
+	p.s. mechanistic elucidation of the impacts of identified microbial signatures on farmer health and disease was beyond the scope of this work. \
+	Address:
+		- Use metagenome-assembled genomes (MAGs) and **strain tracking** 
+		- Study host–microbe interactions (immune response, colonization ability)
+		- Investigate horizontal gene transfer & microbial competition
+
+3. Broader future research directions
+4. ### Reason
+
+- Microbiome changes may be influenced by other variables:
+    
+    > “future studies are warranted…” 
+    
+
+👉 Farming exposure alone doesn’t explain everything
+
+### ⚙️ How to address
+
+- Integrate:
+    - **Dietary data**
+    - **Antibiotic exposure**
+    - **Lifestyle/environmental factors**
+- Apply **multivariate and systems-level analyses**
+- Use a **One Health framework** (human–animal–environment together)
