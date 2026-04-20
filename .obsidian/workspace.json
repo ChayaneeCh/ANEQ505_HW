@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b28b4ace61a48880",
+        "id": "bcafccbb6f408418",
         "type": "tabs",
         "children": [
           {
-            "id": "ebd0098c232d2797",
+            "id": "1ba4a1f2910b621f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_paper_discussions/paper_discussion_6.md",
+                "file": "02_class_project/Note(2024ver.).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "paper_discussion_6"
+              "title": "Note(2024ver.)"
             }
           }
         ]
@@ -194,10 +194,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "ebd0098c232d2797",
+  "active": "1ba4a1f2910b621f",
   "lastOpenFiles": [
-    "03_paper_discussions/paper_discussion_5.md",
     "03_paper_discussions/paper_discussion_6.md",
+    "03_paper_discussions/paper_discussion_5.md",
     "01_homework/homework_1.md",
     "02_class_project/Note(2024ver.).md",
     "02_class_project/Note(current).md",
