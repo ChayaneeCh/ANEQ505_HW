@@ -1,5 +1,6 @@
 
 ### Longitudinal dynamics of farmer and livestock nasal and faecal microbiomes and resistomes (Additional Analysis)
+
 Additional or Future Analysis: provide an idea for an analysis they could have done for the
 paper or how this data could be continued. what would you do?
 
@@ -55,7 +56,7 @@ The findings are largely correlative, not causal. Key uncertainties remain rega
 - What mechanisms enable their persistence and spread
 - How these changes impact human health
 
-Future work must therefore: \
+Future work must therefore: 
 - Use strain-level, longitudinal, and environmental approaches to resolve transmission pathways
 - Investigate mechanistic processes such as colonization and horizontal gene transfer
 - Apply multivariate and systems-level analyses to account for confounding factors
