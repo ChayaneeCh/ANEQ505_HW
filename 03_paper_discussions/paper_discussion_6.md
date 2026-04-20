@@ -24,12 +24,9 @@ paper or how this data could be continued. what would you do?
 		- Investigate horizontal gene transfer & microbial competition
 
 3. Broader future research directions
-	Reason: Microbiome changes may be influenced by other variables:
-    
-    > “future studies are warranted…” 
-    
-
-👉 Farming exposure alone doesn’t explain everything
+	Reason: Microbiome changes may be influenced by other variables: \
+	`Specifically, future studies are warranted to determine whether and how diet and antibiotics facilitate the acquisition, maintenance or amplification of farm- and livestock-associated microbes, as well as their ARGs.` \
+	*Farming exposure alone doesn’t explain everything*
 
 ### ⚙️ How to address
 
