@@ -6,6 +6,7 @@ paper or how this data could be continued. what would you do?
 
 **Mentioned Future Work:**
 1. Clarify transmission routes
+	tThe origins of the similarities between the nasal communities of cows and farmers **remain to be elucidated in future investigations**.
 	Reason: Current data cannot distinguish between:
 		- Direct transfer (animal -> human)
 		- Shared environment (air, surfaces, feed)
