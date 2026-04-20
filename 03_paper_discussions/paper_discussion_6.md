@@ -26,6 +26,8 @@ paper or how this data could be continued. what would you do?
 		- Study host–microbe interactions (immune response, colonization ability)
 		- Investigate horizontal gene transfer & microbial competition
 
+	**Deeper: Function and PWY**
+
 3. Broader future research directions: **Microbe-Microbe Interactions**
 	Reason: Microbiome changes may be influenced by other variables: \
 	`Specifically, future studies are warranted to determine whether and how diet and antibiotics facilitate the acquisition, maintenance or amplification of farm- and livestock-associated microbes, as well as their ARGs. (p.9)` \
