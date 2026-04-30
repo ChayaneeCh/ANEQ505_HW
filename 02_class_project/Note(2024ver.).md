@@ -392,8 +392,8 @@ qiime composition tabulate \
 --o-visualization ancombc2_results_treatment_l7.qzv
   
 qiime composition ancombc2-visualizer \
-  --i-data ancombc2_results_treatment_l7.qza \
-  --o-visualization ancombc2_barplot_treatment_l7.qzv
+--i-data ancombc2_results_treatment_l7.qza \
+--o-visualization ancombc2_barplot_treatment_l7.qzv
 ```
 ## Run Slurm script
 ```
