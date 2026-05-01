@@ -451,7 +451,7 @@ qiime composition ancombc2-visualizer \
 #SBATCH --partition=amilan
 #SBATCH --time=03:00:00
 #SBATCH --mail-type=ALL
-#SBATCH --output=coremetric_slurm-%j.out
+#SBATCH --output=other_slurm-%j.out
 #SBATCH --qos=normal
 #SBATCH --mail-user=chayanee.chanpanich@colostate.edu
 
@@ -462,18 +462,18 @@ module load qiime2/2024.10_amplicon
 # Change directory
 cd /scratch/alpine/c837238655@colostate.edu/soil_project
 
-qiime diversity beta-group-significance
---i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza
---m-metadata-file metadata/metadata.tsv
---m-metadata-column body_site
---p-method permanova
---p-pairwise
+qiime diversity beta-group-significance \
+--i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza \
+--m-metadata-file metadata/metadata.tsv \
+--m-metadata-column Sample_Date \
+--p-method permanova \
+--p-pairwise \
 --o-visualization core_metrics_results/unweighted_unifrac_distance_matrix.qzv
 
-qiime diversity beta-group-significance
---i-distance-matrix core_metrics_results/bray_curtis_distance_matrix.qza
---m-metadata-file metadata/metadata.tsv
---m-metadata-column body_site
+qiime diversity beta-group-significance \
+--i-distance-matrix core_metrics_results/bray_curtis_distance_matrix.qza \
+--m-metadata-file metadata/metadata.tsv \
+--m-metadata-column Sample_Date \
 --o-visualization core_metrics_results/bray_curtis_distance_matrix.qzv
 
 qiime feature-table filter-samples \

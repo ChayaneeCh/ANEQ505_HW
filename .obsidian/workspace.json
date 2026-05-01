@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "4f9c54b55e2b2f1a",
+        "id": "73c65f294202d547",
         "type": "tabs",
         "children": [
           {
-            "id": "46a74df2bcf90921",
+            "id": "bccec850a0d3da0c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_class_project/Note_QIIME2(2024ver.).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Note_QIIME2(2024ver.)"
-            }
-          },
-          {
-            "id": "8307d67cb1eb72ea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_class_project/Note_QIIME2(2024ver.).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Note_QIIME2(2024ver.)"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,10 +190,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "8307d67cb1eb72ea",
+  "active": "bccec850a0d3da0c",
   "lastOpenFiles": [
-    "02_class_project/Note_R.md",
     "02_class_project/Note_QIIME2(2024ver.).md",
+    "02_class_project/Note_R.md",
     "04_extra_credit/README.md",
     "02_class_project/Note(current).md",
     "03_paper_discussions/paper_discussion_8.md",
