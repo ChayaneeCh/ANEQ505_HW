@@ -439,3 +439,33 @@ qiime composition ancombc2-visualizer \
 --i-data ancombc2_results_treatment_l3.qza \
 --o-visualization ancombc2_barplot_treatment_l3.qzv
 ```
+
+
+
+### Others
+
+```
+qiime diversity beta-group-significance   
+--i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza   
+--m-metadata-file metadata/cow_metadata.txt   
+--m-metadata-column body_site   
+--p-method permanova   
+--p-pairwise   
+--o-visualization core_metrics_results/unweighted_unifrac_distance_matrix.qzv
+```
+
+```
+qiime diversity beta-group-significance   
+--i-distance-matrix core_metrics_results/bray_curtis_distance_matrix.qza   
+--m-metadata-file metadata/cow_metadata.txt   
+--m-metadata-column body_site   
+--o-visualization core_metrics_results/bray_curtis_distance_matrix.qzv
+```
+
+```
+qiime feature-table filter-samples \
+--i-table table_nomitochloro_nocontrol.qza \
+--m-metadata-file ../metadata/metadata.tsv \
+--p-where "[Sample_Date]='20250708'" \
+--o-filtered-table ../dada2/table_20250708.qza
+```
