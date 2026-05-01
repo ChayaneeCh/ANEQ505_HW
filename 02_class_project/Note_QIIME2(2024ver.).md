@@ -441,8 +441,7 @@ qiime composition ancombc2-visualizer \
 ```
 
 
-
-### Others
+# Others
 
 ```
 #!/bin/bash
@@ -465,7 +464,7 @@ cd /scratch/alpine/c837238655@colostate.edu/soil_project
 
 qiime diversity beta-group-significance
 --i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza
---m-metadata-file metadata/cow_metadata.txt
+--m-metadata-file metadata/metadata.tsv
 --m-metadata-column body_site
 --p-method permanova
 --p-pairwise
@@ -473,7 +472,7 @@ qiime diversity beta-group-significance
 
 qiime diversity beta-group-significance
 --i-distance-matrix core_metrics_results/bray_curtis_distance_matrix.qza
---m-metadata-file metadata/cow_metadata.txt
+--m-metadata-file metadata/metadata.tsv
 --m-metadata-column body_site
 --o-visualization core_metrics_results/bray_curtis_distance_matrix.qzv
 
