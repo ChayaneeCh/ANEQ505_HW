@@ -445,24 +445,38 @@ qiime composition ancombc2-visualizer \
 ### Others
 
 ```
-qiime diversity beta-group-significance   
---i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza   
---m-metadata-file metadata/cow_metadata.txt   
---m-metadata-column body_site   
---p-method permanova   
---p-pairwise   
+#!/bin/bash
+#SBATCH --job-name=others
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --partition=amilan
+#SBATCH --time=03:00:00
+#SBATCH --mail-type=ALL
+#SBATCH --output=coremetric_slurm-%j.out
+#SBATCH --qos=normal
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
+
+# Activate QIIME2
+module purge
+module load qiime2/2024.10_amplicon
+
+# Change directory
+cd /scratch/alpine/c837238655@colostate.edu/soil_project
+
+qiime diversity beta-group-significance
+--i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza
+--m-metadata-file metadata/cow_metadata.txt
+--m-metadata-column body_site
+--p-method permanova
+--p-pairwise
 --o-visualization core_metrics_results/unweighted_unifrac_distance_matrix.qzv
-```
 
-```
-qiime diversity beta-group-significance   
---i-distance-matrix core_metrics_results/bray_curtis_distance_matrix.qza   
---m-metadata-file metadata/cow_metadata.txt   
---m-metadata-column body_site   
+qiime diversity beta-group-significance
+--i-distance-matrix core_metrics_results/bray_curtis_distance_matrix.qza
+--m-metadata-file metadata/cow_metadata.txt
+--m-metadata-column body_site
 --o-visualization core_metrics_results/bray_curtis_distance_matrix.qzv
-```
 
-```
 qiime feature-table filter-samples \
 --i-table table_nomitochloro_nocontrol.qza \
 --m-metadata-file ../metadata/metadata.tsv \
