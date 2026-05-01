@@ -339,7 +339,7 @@ qiime diversity alpha-group-significance \
 # Differential abundance analysis
 
 Note that ANCOM-BC2 is only available in versions of QIIME2 from 2026 onward.
-Make a new directory called `ancombc2` in the `drought_soils` folder.
+Make a new directory called `ancombc2`
 ```
 #!/bin/bash
 #SBATCH --job-name=ancombc2
@@ -395,7 +395,47 @@ qiime composition ancombc2-visualizer \
 --i-data ancombc2_results_treatment_l7.qza \
 --o-visualization ancombc2_barplot_treatment_l7.qzv
 ```
-## Run Slurm script
+
+Rerun for order level (`--p-level 3`)
 ```
-sbatch ancombc2.sh
+#!/bin/bash
+#SBATCH --job-name=ancombc2
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --partition=amilan
+#SBATCH --time=02:00:00
+#SBATCH --mail-type=ALL
+#SBATCH --output=slurm-%j.out
+#SBATCH --qos=normal
+#SBATCH --mail-user=chayanee.chanpanich@colostate.edu
+
+# Activate QIIME2
+module purge
+module load qiime2/2026.1_amplicon
+
+# Change directory
+cd /scratch/alpine/c837238655@colostate.edu/soil_project/ancombc2
+
+# Collapse features to species level
+qiime taxa collapse \
+--i-table table_14k_abund.qza \
+--i-taxonomy ../taxonomy/taxonomy_gg2_filtered300.qza \
+--p-level 3 \
+--o-collapsed-table table_14k_abund_l3.qza
+
+# Run ANCOM-BC2
+qiime composition ancombc2 \
+--i-table table_14k_abund_l3.qza \
+--m-metadata-file ../metadata/metadata.tsv \
+--p-fixed-effects-formula Treatment \
+--o-ancombc2-output ancombc2_results_treatment_l3.qza
+
+# Visualize ANCOM-BC2 results
+qiime composition tabulate \
+--i-data ancombc2_results_treatment_l3.qza \
+--o-visualization ancombc2_results_treatment_l3.qzv
+  
+qiime composition ancombc2-visualizer \
+--i-data ancombc2_results_treatment_l3.qza \
+--o-visualization ancombc2_barplot_treatment_l3.qzv
 ```
