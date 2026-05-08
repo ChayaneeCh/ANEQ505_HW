@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d2a7d55bd145f38e",
+        "id": "f21e5713ada7264b",
         "type": "tabs",
         "children": [
           {
-            "id": "c1ba24956c0a10fc",
+            "id": "6df4dad9a8d492cc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04_extra_credit/README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "New tab"
             }
           }
         ]
@@ -194,10 +190,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "c1ba24956c0a10fc",
+  "active": "6df4dad9a8d492cc",
   "lastOpenFiles": [
-    "02_class_project/Note_QIIME2(2024ver.).md",
     "04_extra_credit/README.md",
+    "02_class_project/Note_QIIME2(2024ver.).md",
     "Note.md",
     "02_class_project/Note_R.md",
     "02_class_project/Note(current).md",
