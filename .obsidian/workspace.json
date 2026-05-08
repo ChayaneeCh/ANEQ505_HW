@@ -11,10 +11,14 @@
             "id": "6df4dad9a8d492cc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "02_class_project/Note_QIIME2(2024ver.).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Note_QIIME2(2024ver.)"
             }
           }
         ]

@@ -333,6 +333,11 @@ qiime diversity alpha-group-significance \
 --i-alpha-diversity core_metrics_results/faith_pd_vector.qza \
 --m-metadata-file metadata/metadata.tsv \
 --o-visualization core_metrics_results/faiths_pd_statistics.qzv
+
+qiime diversity alpha-group-significance \
+--i-alpha-diversity core_metrics_results/evenness_vector.qza \
+--m-metadata-file metadata/metadata.tsv \
+--o-visualization core_metrics_results/evenness_statistics.qzv
 ```
 
 
